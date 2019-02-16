@@ -31,7 +31,7 @@ La NOK-Rover est une voiture motorisée contrôlée par une manette sans fil.
 
 Le PWM des moteurs a été choisi d'après la fréquence PWM des cartes Arduino.
 
-Le logiciel utilisé afin de modéliser le schéma éléctronique sera Fritzing.
+Le logiciel utilisé afin de modéliser le schéma éléectronique sera Fritzing.
 
 ## e) Annexes
 
@@ -70,5 +70,5 @@ Nous définirons les objets suivants :
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA4ODk2ODYzXX0=
+eyJoaXN0b3J5IjpbMTA0OTM5MTg2NCw0MDg4OTY4NjNdfQ==
 -->
