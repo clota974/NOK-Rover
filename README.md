@@ -1,4 +1,5 @@
-@# NOK Rover - Cahier des Charges
+
+# NOK Rover - Cahier des Charges
 
 # I) Introduction 
 
@@ -55,15 +56,19 @@ Nous définirons les objets suivants :
     - `List onManetteDeconnecte: [...Fonctions...]`
     - `Object lcd` (défini par un module)
     - `Object buzzer`:
-        - 
+        
         - `Function klaxonner(List intervalsInMs)`
     - `Object led`:
         - `Function allumer(Bool onOff)`
         - `Function flasher(Int intervalMs)`
-    - `Function bouger(Int speedX, speedY)` (droite/gauche ; avancer/reculer)
+    - `Function bouger(Int vitesseX, vitesseY)` (droite/gauche ; avancer/reculer)
     - `Function afficher(Str texte, Int hexCodeRGB)`
     - `Function onBuzz1()`
 
 
 ## Notations
 
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDA4ODk2ODYzXX0=
+-->
