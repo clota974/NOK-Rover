@@ -11,7 +11,7 @@ Le déroulé d'une session de programmation se présente ainsi :
 
 On récupère le "journal" de ce qui s'est passé sur GitHub depuis mon dernier fetch. 
 
-## 2) Pull
+## 2) Pull !!!!!
 Si des fichiers ont été modifiés alors je devrai les télécharger.
 Pull, c'est récupérer les fichiers.
 
@@ -20,7 +20,7 @@ Une fois que j'ai modifié mes fichiers, ils s'afficheront sur GitHub Desktop.
 Je dois faire une "photo" de tout ce que j'ai modifié : cette photo est un commit.
 
 Je dois donner *obligatoirement* donner un titre au commit et éventuellement détailler ce qui a été fait. Il faut détailler au plus les changements effectués.
-
+hhkytf-_
 ## 4) Push
 Mes commits sont sauvegardés sur mon ordinateur, cependant, je dois les publier grâce à push (soit l'inverse de pull).
 Il sera fait automatiquement un Fetch afin de voir si rien n'a changé.
