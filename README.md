@@ -16,10 +16,11 @@ Exemple du code :
 ```py
 class Voiture:
 	adresses = {
-		
+		PWMA: 27,
+		AIN1: 
 	}
 	led = Led(adresses.led) # ⇒ C'est la classe qu'on a cree nous-même
-	moteur1 = Moteur(adresses.moteur1A, adresses.moteur1B, adresses.moteur1PWM)
+	moteur1 = Moteur(adresses.AIN1, adresses.AIN2, adresses.PWMA)
 	# .....
 	# .....
 	# .....
@@ -30,5 +31,5 @@ class Voiture:
 Il faudra 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzg1ODA3NTQsNDA4ODk2ODYzXX0=
+eyJoaXN0b3J5IjpbNTc3MzcxNDczLDQwODg5Njg2M119
 -->
