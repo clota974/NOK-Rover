@@ -6,6 +6,13 @@
 |--|--|--|
 | Rien | Voiture | LED, Buzzer
 
+## Notes
+
+Le `led.class.py` est à revoir. Des commentaires ont été ajoutés pour que vous corrigiez les erreurs.
+
+Les commentaires avec un seul `#`  sont les commentaires que vous avez écrits.
+Les commentaires avec deu
+
 ## Nouveautés
 
 ### Classe `Voiture`
@@ -32,5 +39,5 @@ class Voiture:
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMDM1OTY4Niw0MDg4OTY4NjNdfQ==
+eyJoaXN0b3J5IjpbMzMwNzcwMDcyLDQwODg5Njg2M119
 -->
