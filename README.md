@@ -10,16 +10,19 @@
 
 ### Classe `Voiture`
 
-La classe Voiture sera le lien entre toutes les classes. Il permettra d'allumer la LED, coordonner les deux moteurs, klaxonner...
+La classe Voiture sera le lien entre toutes les classes. Il permettra d'allumer la **LED**, coordonner les **deux moteurs**, **klaxonner**...
+
+Il faudra créer un dictionnaire avec les adresses de chaque PIN d'après pinout.pdf dans le dossier `notes`
 
 Exemple du code : 
 ```py
 class Voiture:
 	adresses = {
 		PWMA: 27,
-		AIN1: 
+		AIN2: 18,
+		...
 	}
-	led = Led(adresses.led) # ⇒ C'est la classe qu'on a cree nous-même
+	led = Led(adresses.led) # ⇒ C'est la classe qu'on a cree nous-mêmes
 	moteur1 = Moteur(adresses.AIN1, adresses.AIN2, adresses.PWMA)
 	# .....
 	# .....
@@ -28,8 +31,6 @@ class Voiture:
 		# Faire bouger les moteurs
 ```
 
-Il faudra 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc3MzcxNDczLDQwODg5Njg2M119
+eyJoaXN0b3J5IjpbLTUzMDM1OTY4Niw0MDg4OTY4NjNdfQ==
 -->
