@@ -10,8 +10,10 @@
 
 Le `led.class.py` est à revoir. Des commentaires ont été ajoutés pour que vous corrigiez les erreurs.
 
-Les commentaires avec un seul `#`  sont les commentaires que vous avez écrits.
-Les commentaires avec deu
+Les commentaires commençant par :
+-  `#`  : commentaires que vous avez écrits.
+- `##` : Notes de correction (à enlever une fois la correction effectuée)
+- `####` : Commentaire pour le correcteur Python
 
 ## Nouveautés
 
@@ -39,5 +41,5 @@ class Voiture:
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMwNzcwMDcyLDQwODg5Njg2M119
+eyJoaXN0b3J5IjpbMTEzMTkzOTk2OSw0MDg4OTY4NjNdfQ==
 -->
