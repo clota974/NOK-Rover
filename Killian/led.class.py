@@ -15,4 +15,4 @@ class Led :
         elif self.clignotement > 0:
             self.clignotement = 0
 
-        self.PWM.ChangeDutyCycle(self.PWM, self.clignotement)
+        self.PWM.ChangeDutyCycle(self.clignotement)
