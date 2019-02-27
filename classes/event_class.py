@@ -30,8 +30,6 @@ class Event:
             "LEFT_RIGHT": 188,
             "UP_DOWN": 188
         }
-
-
     }
 
     historique = {
