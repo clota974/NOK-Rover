@@ -23,6 +23,10 @@ Processus : nous serons en mesure de pouvoir controler la ROK rover en utilisant
 
     chaque classe sera composé de définitions de variables lié a des ports electroniques du (j'ai oublie le nom argh)
 
+                quelques donnés en plus :
+                    -la frequence du buzzer sera constante (1024hz)
+                    -la frequence de la led (1hz)
+                    -l'affichage LCD peut afficher des couleurs
 
 
 """
