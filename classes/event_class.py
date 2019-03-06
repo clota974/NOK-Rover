@@ -30,26 +30,37 @@ class Event:
             "LEFT_RIGHT": 188,
             "UP_DOWN": 188
         }
-
-
     }
 
     historique = {
         "DS4": {}
     }
 
-    def __init__(self, source, data):
+    def __init__(self, source, raw):
         self.source = source # "DS4"
-        self.data = data
+        self.raw = raw
 
         if(self.source == "DS4"):
-            self.analiserDS4(self.data)
+            self.analiserDS4(self.raw)
 
 
-    def analiserDS4(self, data):
-        buffer = data # Stocker dans un buffer pour ne pas modifier le data
+    def analiserDS4(self, raw):
+        buffer = raw # Stocker dans un buffer pour ne pas modifier le raw
         
-        buffer
+        for key, index in self.INDEX_DS4["digital"]:
+            buffer[key] = True if raw[index]==1 else False
+
+        for key, index in self.INDEX_DS4["analogue"]:
+            bit1 = raw[index]
+            bit2 = raw[index+1]
+            buffer[key] = Event.base16_vers_pourcent(bit1, bit2)
+
+        buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
+        buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
+        buffer["UP"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
+        buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
+
+        self.data = buffer
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):
