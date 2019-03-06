@@ -17,6 +17,7 @@ Processus : nous serons en mesure de pouvoir controler la ROK rover en utilisant
         -la classe buzzer qui nous permettra de "klaxonner" en maintennant une touche sur la manette
         -la classe led qui va servir d'indicateur de connection avec la manette (la led clignotera pendant l'appairage avec la manette)
         -la classe (écran?) sur laquelle on affichera la vitesse de la voiture (en m/s pour des soucis d'echelle)
+        -la classe (manette?) qui permettra de diriger la voiture selon deux axes (x,y) et ainsi pouvoir tourner a gauche ou a droite
         -la classe voiture qui regroupera l'enssemble des classes
 
 
