@@ -42,11 +42,10 @@ class Voiture:
 
 Il faut donc créer des fonctions pour :
 
-- Klaxonner
+- Klaxonner (array_intervalles) : 
 - Bouger la voiture `(vitesse_x, vitesse_y)`
-- 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NDU5NzI0NCwxMTMxOTM5OTY5LDQwOD
+eyJoaXN0b3J5IjpbLTQ2NTUwMjM5NywxMTMxOTM5OTY5LDQwOD
 g5Njg2M119
 -->
