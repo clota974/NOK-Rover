@@ -1,21 +1,7 @@
-# 27/02/2019
+# 28/03/2019
 
-## Objectifs
+J'ai mis ici ce que tu peux faire pour avancer un peu. Tu peux notamment réfléchir
 
-| To do | In progress | Done
-|--|--|--|
-| Rien | Voiture | LED, Buzzer
-
-## Notes
-
-Le `led.class.py` est à revoir. Des commentaires ont été ajoutés pour que vous corrigiez les erreurs.
-
-Les commentaires commençant par :
--  `#`  : commentaires que vous avez écrits.
-- `##` : Notes de correction (à enlever une fois la correction effectuée)
-- `####` : Commentaire pour le correcteur Python
-
-## Nouveautés
 
 ### Classe `Voiture`
 
@@ -75,6 +61,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTcwNzQ5NzUsMTEzMTkzOTk2OSw0MD
+eyJoaXN0b3J5IjpbLTE3MTMxMDcyNzIsMTEzMTkzOTk2OSw0MD
 g4OTY4NjNdfQ==
 -->
