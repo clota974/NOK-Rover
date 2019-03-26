@@ -71,9 +71,10 @@ Quels paramètres/arguments j'utilise (ce qu'il y a entre parenthèses après le
 
 Quel est le type, le format, l'unité de chaque paramètre? 
 
-Comment est-ce que je fais avancer physiquement la voiture? --> En activant les moteurs --> Comment? A quelle vi
-Faire bouger `moteur_gauche`
+Comment est-ce que je fais avancer physiquement la voiture? --> En activant les moteurs --> Comment? A quelle vitesse? Dans quel sens?
+
+A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA2MzczOTA4LDExMzE5Mzk5NjksNDA4OD
-k2ODYzXX0=
+eyJoaXN0b3J5IjpbLTExNTcwNzQ5NzUsMTEzMTkzOTk2OSw0MD
+g4OTY4NjNdfQ==
 -->
