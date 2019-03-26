@@ -65,9 +65,15 @@ Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait 
 
 - Bouger la voiture  :
 
-Petit exercice : Réfléchis à comment on pourrait faire pour coordonner les deux moteurs. C'est-à-dire, je veux faire bouger la voiture avec la fonction qui s'appelle **par exemple** `bouger`. Quels paramètres/arguments j'utilise (ce qu'il y a entre parenthèses après le nom de la fonction)? Quel est le format des 
+Petit exercice : Réfléchis à comment on pourrait faire pour coordonner les deux moteurs. C'est-à-dire, je veux faire bouger la voiture avec la fonction qui s'appelle **par exemple** `bouger` :
+
+Quels paramètres/arguments j'utilise (ce qu'il y a entre parenthèses après le nom de la fonction)? 
+
+Quel est le type, le format, l'unité de chaque paramètre? 
+
+Comment est-ce que je fais avancer physiquement la voiture? --> En activant les moteurs --> Comment? A quelle vi
 Faire bouger `moteur_gauche`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MTI4MzE0NSwxMTMxOTM5OTY5LDQwOD
-g5Njg2M119
+eyJoaXN0b3J5IjpbOTA2MzczOTA4LDExMzE5Mzk5NjksNDA4OD
+k2ODYzXX0=
 -->
