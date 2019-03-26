@@ -1,6 +1,10 @@
 # 28/03/2019
 
-J'ai mis ici ce que tu peux faire pour avancer un peu. Tu peux notamment réfléchir
+J'ai mis ici ce que tu peux faire pour avancer un peu. 
+**Y'a la classe moteur à faire** (et tu peux aussi penser à la fonction `bouger` de la classe voiture`
+
+# Classe moteur
+
 
 
 ### Classe `Voiture`
@@ -61,6 +65,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTMxMDcyNzIsMTEzMTkzOTk2OSw0MD
-g4OTY4NjNdfQ==
+eyJoaXN0b3J5IjpbNDg5NzUyNzA0LDExMzE5Mzk5NjksNDA4OD
+k2ODYzXX0=
 -->
