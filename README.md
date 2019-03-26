@@ -1,81 +1,17 @@
-# 28/03/2019
 
-J'ai mis ici ce que tu peux faire pour avancer un peu. 
-(Tu peux aussi penser à la fonction `bouger` de la classe voiture)
+# NOK-ROVER
 
+Bienvenue sur le répertoire du projet *NOK-Rover* piloté par les capitaines **Nils, Olivia et Killian**
 
-## La rédaction du Cahier des charges
+Selon *Wikipédia* : 
+> _**Rover**_ est originellement un mot anglais signifiant « vagabond », « nomade », « vadrouilleur ». 
 
-**IMPORTANT**
-Tu as nommé le fichier `cahierdescharges.py` **mais ce n'est pas un fichier Python donc pas de `.py`. A la place, tu peux mettre `cahierdescharges.txt` ou `cahierdescharges.md` si tu veux écrire en Markdown (tu peux apprendre là [https://learnxinyminutes.com/docs/markdown/](https://learnxinyminutes.com/docs/markdown/))
-
-
-Oublie pas l'exemple que M. Etheve a mis sur Moodle. 
-Voilà le cahier des charges qu'on a fait pour Nimes : [https://github.com/clota974/Killian-ISN/blob/master/nimes/Rapport.pdf](https://github.com/clota974/Killian-ISN/blob/master/nimes/Rapport.pdf)
-
-## L'écran LCD
-
-Il faut chercher qu'est-ce qu'on va afficher sur l'écran LCD.
+> _**Rover**_ : a vehicle that explores the surface of an astronomical body
 
 
-### Classe `Voiture`
+Notre Rover est encore en cours d'assemblage. 
 
-La classe Voiture sera le lien entre toutes les classes. Il permettra d'allumer la **LED**, coordonner les **deux moteurs**, **klaxonner**... ⇒ 
-
-Il faudra créer un dictionnaire avec les adresses de chaque PIN d'après pinout.pdf dans le dossier `notes`
-
-Exemple du code : 
-```py
-class Voiture:
-	adresses = {
-		PWMA: 27,
-		AIN2: 18,
-		...
-	}
-	led = Led(adresses.led) # ⇒ C'est la classe qu'on a cree nous-mêmes
-	moteur1 = Moteur(adresses.AIN1, adresses.AIN2, adresses.PWMA)
-	# .....
-	# .....
-	# .....
-	def bouger(self, vitesse_x, vitesse_y):
-		# Faire bouger les moteurs
-```
-
-Les propriétés (variables) de la classe sont : 
-
-- La LED
-- Le Buzzer
-- Les DEUX moteurs [⇒ Revoir la classe que tu as faite] :
-Ex *(à vérifier/confirmer)* : 
-```py
-import classes.Moteur 
-
-moteur_gauche = Moteur(...à remplir selon la classe...)
-```
-- L'écran LCD (plus tard)
-- Les adresses
-
-Il faut donc créer des fonctions pour :
-
-- Klaxonner (list: intervalles, entier: repeter_nbr_fois)  :
-*C'est un peu compliqué mais tu peux le faire. Programmer c'est chercher des solutions (par soi-même ou sur internet)*
-Exemple : `klaxonner([2,3,4,5], 5)`. 
-La voiture klaxonnera 2s puis attendra 3s avant de klaxonner 4s puis attendra 5s avant de recommencer en klaxonnant 2s et attendre 3s.... Il répétera en 5 fois
-
-Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans la liste des intervalles, stocker l'heure de départ, calculer la différence de temps avec l'heure actuelle (tout ça dans une boucle *while*). Si la différence correspond à la valeur dans l'array (selon la position) (càd le nombre de secondes à attendre ou à klaxonner) alors passer à la position suivante dans la liste et changer l'état du buzzer.
-
-- Bouger la voiture  :
-
-Petit exercice : Réfléchis à comment on pourrait faire pour coordonner les deux moteurs. C'est-à-dire, je veux faire bouger la voiture avec la fonction qui s'appelle **par exemple** `bouger` :
-
-Quels paramètres/arguments j'utilise (ce qu'il y a entre parenthèses après le nom de la fonction)? 
-
-Quel est le type, le format, l'unité de chaque paramètre? 
-
-Comment est-ce que je fais avancer physiquement la voiture? --> En activant les moteurs --> Comment? A quelle vitesse? Dans quel sens?
-
-A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
+Revenez bientôt pour le départ! 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQyMjQ2NjEzLC0xNzExMDc3NDQ0LDExMz
-E5Mzk5NjksNDA4ODk2ODYzXX0=
+eyJoaXN0b3J5IjpbMTExNzk5MzkyNl19
 -->
