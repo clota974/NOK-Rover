@@ -63,9 +63,11 @@ La voiture klaxonnera 2s puis attendra 3s avant de klaxonner 4s puis attendra 5s
 
 Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans la liste des intervalles, stocker l'heure de départ, calculer la différence de temps avec l'heure actuelle (tout ça dans une boucle *while*). Si la différence correspond à la valeur dans l'array (selon la position) (càd le nombre de secondes à attendre ou à klaxonner) alors passer à la position suivante dans la liste et changer l'état du buzzer.
 
-- Bouger la voiture `(vitesse_x, vitesse_y)` :
+- Bouger la voiture  :
 
+Petit exercice : Réfléchis à comment on pourrait faire pour coordonner les deux moteurs. C'est-à-dire, je veux faire bouger la voiture avec la fonction qui s'appelle **par exemple** `bouger`. Quels paramètres/arguments j'utilise (ce qu'il y a entre parenthèses après le nom de la fonction)? Quel est le format des 
+Faire bouger `moteur_gauche`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODg4ODY1NSwxMTMxOTM5OTY5LDQwOD
+eyJoaXN0b3J5IjpbLTU4MTI4MzE0NSwxMTMxOTM5OTY5LDQwOD
 g5Njg2M119
 -->
