@@ -11,7 +11,7 @@ Tu as nommé le fichier `cahierdescharges.py` **mais ce n'est pas un fichier Pyt
 
 
 Oublie pas l'exemple que M. Etheve a mis sur Moodle. 
-Voilà le cahier des charges qu'on a fait pour Nimes : 
+Voilà le cahier des charges qu'on a fait pour Nimes : [https://github.com/clota974/Killian-ISN/blob/master/nimes/Rapport.pdf](https://github.com/clota974/Killian-ISN/blob/master/nimes/Rapport.pdf)
 
 ## L'écran LCD
 
@@ -76,6 +76,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTEwNzc0NDQsMTEzMTkzOTk2OSw0MD
-g4OTY4NjNdfQ==
+eyJoaXN0b3J5IjpbOTQyMjQ2NjEzLC0xNzExMDc3NDQ0LDExMz
+E5Mzk5NjksNDA4ODk2ODYzXX0=
 -->
