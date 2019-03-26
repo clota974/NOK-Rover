@@ -7,7 +7,7 @@ J'ai mis ici ce que tu peux faire pour avancer un peu.
 ## La rédaction du Cahier des charges
 
 **IMPORTANT**
-Tu as nommé le fichier `cahierdescharges.py`**
+Tu as nommé le fichier `cahierdescharges.py` **mais ce n'est pas un fichier Python donc pas de `.py`. A la place, tu peux mettre `cahierdescharges.txt` ou `cahierdescharges.md` si tu veux écrire en Markdown 
 Oublie pas l'exemple que M. Etheve a mis sur Moodle. 
 Voilà le cahier des charges qu'on a fait pour Nimes : 
 
@@ -72,6 +72,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxMDkzMzUsMTEzMTkzOTk2OSw0MDg4OT
-Y4NjNdfQ==
+eyJoaXN0b3J5IjpbMTIyMzg0MzI3OCwxMTMxOTM5OTY5LDQwOD
+g5Njg2M119
 -->
