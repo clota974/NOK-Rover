@@ -45,9 +45,11 @@ Les propriétés (variables) de la classe sont :
 - La LED
 - Le Buzzer
 - Les DEUX moteurs [⇒ Revoir la classe que tu as faite] :
-Ex : 
+Ex *(à vérifier/confirmer)* : 
 ```py
-import classes.moteur 
+import classes.Moteur 
+
+moteur_gauche = Moteur(...à remplir selon la classe...)
 ```
 - L'écran LCD (plus tard)
 - Les adresses
@@ -64,6 +66,6 @@ Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait 
 - Bouger la voiture `(vitesse_x, vitesse_y)` :
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg0Nzg2MzQwLDExMzE5Mzk5NjksNDA4OD
-k2ODYzXX0=
+eyJoaXN0b3J5IjpbMTQyODg4ODY1NSwxMTMxOTM5OTY5LDQwOD
+g5Njg2M119
 -->
