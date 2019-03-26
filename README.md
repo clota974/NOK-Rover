@@ -4,9 +4,12 @@ J'ai mis ici ce que tu peux faire pour avancer un peu.
 (Tu peux aussi penser à la fonction `bouger` de la classe voiture)
 
 
-## Commencer la rédaction du Cahier des charges
+## La rédaction du Cahier des charges
 
-Oublie pas l'exemple que M. Et
+**IMPORTANT**
+Tu as nommé le fichier `cahierdescharges.py`**
+Oublie pas l'exemple que M. Etheve a mis sur Moodle. 
+Voilà le cahier des charges qu'on a fait pour Nimes : 
 
 ## 
 
@@ -69,6 +72,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjI4NTkzMywxMTMxOTM5OTY5LDQwOD
-g5Njg2M119
+eyJoaXN0b3J5IjpbNTkxMDkzMzUsMTEzMTkzOTk2OSw0MDg4OT
+Y4NjNdfQ==
 -->
