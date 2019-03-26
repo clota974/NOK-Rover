@@ -40,12 +40,20 @@ class Voiture:
 		# Faire bouger les moteurs
 ```
 
+Les propriétés (variables) de la classe sont : 
+
+- La LED
+- Le Buzzer
+- 
+
 Il faut donc créer des fonctions pour :
 
-- Klaxonner (array_intervalles) : 
+- Klaxonner (array_intervalles)  :
+Exemple : `klaxonner([2,3,4,5])`. La voiture klaxonnera
+
 - Bouger la voiture `(vitesse_x, vitesse_y)`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NTUwMjM5NywxMTMxOTM5OTY5LDQwOD
-g5Njg2M119
+eyJoaXN0b3J5IjpbMTczNjI2NzE0LDExMzE5Mzk5NjksNDA4OD
+k2ODYzXX0=
 -->
