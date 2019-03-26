@@ -19,7 +19,7 @@ Les commentaires commençant par :
 
 ### Classe `Voiture`
 
-La classe Voiture sera le lien entre toutes les classes. Il permettra d'allumer la **LED**, coordonner les **deux moteurs**, **klaxonner**...
+La classe Voiture sera le lien entre toutes les classes. Il permettra d'allumer la **LED**, coordonner les **deux moteurs**, **klaxonner**... ⇒ 
 
 Il faudra créer un dictionnaire avec les adresses de chaque PIN d'après pinout.pdf dans le dossier `notes`
 
@@ -36,10 +36,17 @@ class Voiture:
 	# .....
 	# .....
 	# .....
-	def bouger(self, x, y):
+	def bouger(self, vitesse_x, vitesse_y):
 		# Faire bouger les moteurs
 ```
 
+Il faut donc créer des fonctions pour :
+
+- Klaxonner
+- Bouger la voiture `(vitesse_x, vitesse_y)`
+- 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMTkzOTk2OSw0MDg4OTY4NjNdfQ==
+eyJoaXN0b3J5IjpbMTU4NDU5NzI0NCwxMTMxOTM5OTY5LDQwOD
+g5Njg2M119
 -->
