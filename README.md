@@ -1,10 +1,14 @@
 # 28/03/2019
 
 J'ai mis ici ce que tu peux faire pour avancer un peu. 
-**Y'a la classe moteur à faire** (et tu peux aussi penser à la fonction `bouger` de la classe voiture`
+(Tu peux aussi penser à la fonction `bouger` de la classe voiture)
 
-# Classe moteur
 
+## Commencer la rédaction du Cahier des charges
+
+Oublie pas l'exemple que M. Et
+
+## 
 
 
 ### Classe `Voiture`
@@ -65,6 +69,6 @@ Comment est-ce que je fais avancer physiquement la voiture? --> En activant les 
 
 A toi d'y réfléchir... Ecrire du code python si tu le sens, sinon juste réfléchir à la méthode, et écrire du pseudo-code (en français).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg5NzUyNzA0LDExMzE5Mzk5NjksNDA4OD
-k2ODYzXX0=
+eyJoaXN0b3J5IjpbMTA1MjI4NTkzMywxMTMxOTM5OTY5LDQwOD
+g5Njg2M119
 -->
