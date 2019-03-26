@@ -44,16 +44,19 @@ Les propriétés (variables) de la classe sont :
 
 - La LED
 - Le Buzzer
-- 
+- L'écran LCD (plus tard)
+- Les adresses
 
 Il faut donc créer des fonctions pour :
 
 - Klaxonner (array_intervalles)  :
-Exemple : `klaxonner([2,3,4,5])`. La voiture klaxonnera
+*C'est un peu compliqué mais tu peux le faire. Programmer c'est chercher des solutions (par soi-même ou sur internet)*
+Exemple : `klaxonner([2,3,4,5])`. 
+La voiture klaxonnera 
 
 - Bouger la voiture `(vitesse_x, vitesse_y)`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjI2NzE0LDExMzE5Mzk5NjksNDA4OD
+eyJoaXN0b3J5IjpbNzEzNDAyNzcxLDExMzE5Mzk5NjksNDA4OD
 k2ODYzXX0=
 -->
