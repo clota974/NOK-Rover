@@ -49,16 +49,16 @@ Les propriétés (variables) de la classe sont :
 
 Il faut donc créer des fonctions pour :
 
-- Klaxonner (array: intervalles, entier: repeter)  :
+- Klaxonner (array: intervalles, entier: repeter_nbr_fois)  :
 *C'est un peu compliqué mais tu peux le faire. Programmer c'est chercher des solutions (par soi-même ou sur internet)*
 Exemple : `klaxonner([2,3,4,5], 5)`. 
 La voiture klaxonnera 2s puis attendra 3s avant de klaxonner 4s puis attendra 5s avant de recommencer en klaxonnant 2s et attendre 3s.... Il répétera en 5 fois
 
-Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans l'array des intervalles, stocker l'heure de départ, calculer la différence de temps avec 
+Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans l'array des intervalles, stocker l'heure de départ, calculer la différence de temps avec l'heure actuelle (tout ça dans une boucle *while*) puis 
 
 - Bouger la voiture `(vitesse_x, vitesse_y)`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYyODI1MDk2LDExMzE5Mzk5NjksNDA4OD
+eyJoaXN0b3J5IjpbLTU5MzI2MDM3LDExMzE5Mzk5NjksNDA4OD
 k2ODYzXX0=
 -->
