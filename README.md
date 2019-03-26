@@ -44,21 +44,22 @@ Les propriétés (variables) de la classe sont :
 
 - La LED
 - Le Buzzer
+- Les DEUX moteurs (`moteur_gauche`, `moteur_droit`) [⇒ Revoir la classe que tu as fait 
 - L'écran LCD (plus tard)
 - Les adresses
 
 Il faut donc créer des fonctions pour :
 
-- Klaxonner (array: intervalles, entier: repeter_nbr_fois)  :
+- Klaxonner (list: intervalles, entier: repeter_nbr_fois)  :
 *C'est un peu compliqué mais tu peux le faire. Programmer c'est chercher des solutions (par soi-même ou sur internet)*
 Exemple : `klaxonner([2,3,4,5], 5)`. 
 La voiture klaxonnera 2s puis attendra 3s avant de klaxonner 4s puis attendra 5s avant de recommencer en klaxonnant 2s et attendre 3s.... Il répétera en 5 fois
 
-Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans l'array des intervalles, stocker l'heure de départ, calculer la différence de temps avec l'heure actuelle (tout ça dans une boucle *while*) puis 
+Plusieurs manières de faire, je te laisse y réfléchir. Le plus facile serait de stocker la position dans la liste des intervalles, stocker l'heure de départ, calculer la différence de temps avec l'heure actuelle (tout ça dans une boucle *while*). Si la différence correspond à la valeur dans l'array (selon la position) (càd le nombre de secondes à attendre ou à klaxonner) alors passer à la position suivante dans la liste et changer l'état du buzzer.
 
-- Bouger la voiture `(vitesse_x, vitesse_y)`
+- Bouger la voiture `(vitesse_x, vitesse_y)` :
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MzI2MDM3LDExMzE5Mzk5NjksNDA4OD
-k2ODYzXX0=
+eyJoaXN0b3J5IjpbMTY0MTAwODA5MywxMTMxOTM5OTY5LDQwOD
+g5Njg2M119
 -->
