@@ -1,3 +1,7 @@
+# pylint: disable=import-error
+
+import RPi.GPIO as GPIO
+
 class Led :
     #marche #arret
     clignotement = 0

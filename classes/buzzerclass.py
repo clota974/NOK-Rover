@@ -1,3 +1,6 @@
+# pylint: disable=import-error
+import RPi.GPIO as GPIO
+
 class Buzzer :
     #marche #arret
     allume = 1
@@ -8,7 +11,7 @@ class Buzzer :
             a_PWM (int): 
         """
         self.PWM = GPIO.PWM(a_PWM, 1024)
-        self.PWM.start(self.allumer)
+        self.PWM.start(self.allume)
 
 
 
