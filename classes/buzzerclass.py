@@ -3,8 +3,9 @@ import RPi.GPIO as GPIO
 
 class Buzzer :
     #marche #arret
-    allume = 1
+    
     def __init__(self, a_PWM):
+        self.allume = 0
         """
         Args:
             self

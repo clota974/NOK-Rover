@@ -4,8 +4,9 @@ import RPi.GPIO as GPIO
 
 class Moteur :
     #marche 
-    vitesse = 0
+    
     def __init__(self, a_IN1, a_IN2, a_PWM) :
+        self.vitesse = 0
         self.a_IN1 = a_IN1
         self.a_IN2 = a_IN2
 

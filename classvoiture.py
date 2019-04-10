@@ -1,4 +1,4 @@
-class voiture :
+class Voiture :
     adresses = {
         "PWMA": 27,
         "AIN2": 18,

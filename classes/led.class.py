@@ -4,8 +4,9 @@ import RPi.GPIO as GPIO
 
 class Led :
     #marche #arret
-    clignotement = 0
+    
     def __init__(self, a_PWM):
+        self.clignotement = 0
         self.PWM = GPIO.PWM(a_PWM, 1) #GPIO clignotement #### pylint: disable=undefined-variable
         self.PWM.start(self.clignotement)
 
