@@ -37,7 +37,7 @@ class Event:
     }
 
     def __init__(self, source, raw):
-        self.source = source # "DS4"
+        self.source = source # "DS4" par défaut
         self.raw = raw
 
         if(self.source == "DS4"):
@@ -48,12 +48,12 @@ class Event:
         buffer = raw # Stocker dans un buffer pour ne pas modifier le raw
         
         for key, index in self.INDEX_DS4["digital"]:
-            buffer[key] = True if raw[index]==1 else False
+            buffer[key] = True if raw[index]==1 else False # Stocker True ou False 
 
         for key, index in self.INDEX_DS4["analogue"]:
             bit1 = raw[index]
             bit2 = raw[index+1]
-            buffer[key] = Event.base16_vers_pourcent(bit1, bit2)
+            buffer[key] = Event.base16_vers_pourcent(bit1, bit2) # Base 16 vers pourcentage
 
         buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
         buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
