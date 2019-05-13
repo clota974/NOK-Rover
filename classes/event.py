@@ -54,8 +54,8 @@ class Event:
         for key in self.INDEX_DS4["analogue"]:
             index = list(self.INDEX_DS4["analogue"].keys()).index(key)
             try:
-                bit1 = int(raw[index], 16)
-                bit2 = int(raw[index+1], 16)
+                bit1 = raw[index]
+                bit2 = raw[index+1]
             except:
                 print(raw[index])
                 print(type(raw[index]))
@@ -96,6 +96,3 @@ class Event:
 
         return pourcentage
 
-
-ev = Event(sample)
-print(ev.data)
