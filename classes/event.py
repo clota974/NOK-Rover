@@ -41,10 +41,10 @@ class Event:
         self.raw = raw
 
         if(self.source == "DS4"):
-            self.analiserDS4(self.raw)
+            self.analyserDS4(self.raw)
 
 
-    def analiserDS4(self, raw):
+    def analyserDS4(self, raw):
         buffer = raw # Stocker dans un buffer pour ne pas modifier le raw
         
         for key, index in self.INDEX_DS4["digital"]:
