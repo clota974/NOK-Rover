@@ -1,5 +1,5 @@
 # pylint: disable=import-error
-import os, sys, datetime, colored
+import os, sys, datetime, colored, json
 from time import sleep
 from io import FileIO
 from classes.event import Event
@@ -42,8 +42,11 @@ while True:
     # print()
 
     ev = Event(buf)
-
-    print("\r"+ev.data, end="")
+    dat = json.dumps(ev.data).replace('"',"")
+    dat = json.dumps(ev.data).replace('{',"")
+    dat = json.dumps(ev.data).replace('}',"")
+    dat = json.dumps(ev.data).replace(',',"")
+    print("\r"+dat, end="")
     print()
     print()
     print()
