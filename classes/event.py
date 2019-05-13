@@ -5,20 +5,20 @@ class Event:
 
     INDEX_DS4 = {
         "digital": {
-            "CARRE": 4,
-            "CROIX": 12,
-            "ROND": 20,
-            "TRIANGLE": 28,
+            "CAR": 4,
+            "CRO": 12,
+            "RON": 20,
+            "TRI": 28,
             "L1": 36,
             "R1": 44,
-            "L2_DIGITAL": 52,
-            "R2_DIGITAL": 60,
-            "SHARE": 68,
-            "OPTIONS": 76,
+            "L2D": 52,
+            "R2D": 60,
+            "SHA": 68,
+            "OPT": 76,
             "L3": 84,
             "R3": 92,
             "PS": 100,
-            "TRACKPAD": 108
+            "TRA": 108
         },
         "analogue": {
             "R_X": 116,
@@ -29,8 +29,8 @@ class Event:
             "L_Y": 156
         },
         "autre": {
-            "LEFT_RIGHT": 188,
-            "UP_DOWN": 188
+            "L_R": 188,
+            "U_D": 188
         }
     }
 
@@ -49,7 +49,7 @@ class Event:
         
         for key in self.INDEX_DS4["digital"]:
             index = list(self.INDEX_DS4["digital"].keys()).index(key)
-            buffer[key] = True if raw[index]==1 else False # Stocker True ou False 
+            buffer[key] = 1 if raw[index]==1 else 0 # Stocker True ou False 
 
         for key in self.INDEX_DS4["analogue"]:
             index = list(self.INDEX_DS4["analogue"].keys()).index(key)
@@ -94,5 +94,5 @@ class Event:
 
         pourcentage = valeur/max16*100
 
-        return pourcentage
+        return int(pourcentage)
 
