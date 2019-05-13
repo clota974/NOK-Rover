@@ -29,15 +29,16 @@ while True:
     i = 0
     while i < len(buf):
         val = format(buf[i], "02x")
-        if(i in key):
-            arr.append(colored.bg("green")+val+colored.attr("reset"))
-        else:
-            arr.append(val)
+        arr.append(val)
         
         i+=1
 
 
-
-    print(arr)
+    # p = ' '.join(arr)
+    # p = p.replace("\r", "")
+    # print("\r"+p, end="") 
+    # print()
+    # print()
+    print(buf)
     sleep(0.1)
     sys.stdout.flush()
