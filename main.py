@@ -43,7 +43,7 @@ while True:
 
     ev = Event(buf)
 
-    print(ev.data)
+    print("\r"+ev.data, end="")
     print()
     print()
     print()
