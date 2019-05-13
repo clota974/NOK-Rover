@@ -53,6 +53,7 @@ class Event:
 
         for key in self.INDEX_DS4["analogue"]:
             index = list(self.INDEX_DS4["analogue"].keys()).index(key)
+            print(raw[index])
             bit1 = int(raw[index], 16)
             bit2 = int(raw[index+1], 16)
             buffer[key] = Event.base16_vers_pourcent(bit1, bit2) # Base 16 vers pourcentage
