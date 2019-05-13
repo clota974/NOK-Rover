@@ -63,10 +63,10 @@ class Event:
 
         print(buffer)
 
-        buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
-        buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
-        buffer["UP"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
-        buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
+        buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["LR"]] == 0x01)
+        buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["LR"]] == 0xFF)
+        buffer["UP"] = (raw[self.INDEX_DS4["autre"]["LR"]] == 0x01)
+        buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["LR"]] == 0xFF)
 
         self.data = buffer
 
