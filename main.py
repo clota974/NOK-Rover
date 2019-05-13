@@ -37,11 +37,7 @@ while True:
         i+=1
 
 
-    # p = ' '.join(arr)
-    # p = p.replace("\r", "")
-    # print("\r"+p, end="") 
-    # print()
-    # print()
-    print(r)
+
+    print(arr)
     sleep(0.1)
     sys.stdout.flush()
