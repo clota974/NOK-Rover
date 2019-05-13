@@ -1,3 +1,5 @@
+sample = "66 4b 08 00 00 00 81 00 66 4b 08 00 00 00 81 01 66 4b 08 00 00 00 81 02 66 4b 08 00 00 00 81 03 66 4b 08 00 00 00 81 04 66 4b 08 00 00 00 81 05 66 4b 08 00 00 00 81 06 66 4b 08 00 00 00 81 07 66 4b 08 00 00 00 81 08 66 4b 08 00 00 00 81 09 66 4b 08 00 00 00 81 0a 66 4b 08 00 00 00 81 0b 66 4b 08 00 00 00 81 0c 66 4b 08 00 00 00 81 0d 66 4b 08 00 00 00 82 00 66 4b 08 00 00 00 82 01 66 4b 08 00 b7 fc 82 02 66 4b 08 00 01 80 82 03 66 4b 08 00 01 80 82 04 66 4b 08 00 00 00 82 05 66 4b 08 00 30 fc 82 06 66 4b 08 00 aa 0d 82 07 66 4b 08 00 8e 3f 82 08 66 4b 08 00 00 00 82 09 66 4b 08 00 00 00 82 0a 66 4b 08 00 00 00 82 0b 66 4b 08 00 00 00 82 0c 66 4b 08 00 00 00 82 0d 00 00 00 00 00 00"
+sample = sample.split(" ")
 
 class Event:
 
@@ -36,24 +38,26 @@ class Event:
         "DS4": {}
     }
 
-    def __init__(self, source, raw):
-        self.source = source # "DS4" par défaut
+    def __init__(self, raw):
         self.raw = raw
 
-        if(self.source == "DS4"):
-            self.analyserDS4(self.raw)
+        self.analyserDS4(self.raw)
 
 
     def analyserDS4(self, raw):
-        buffer = raw # Stocker dans un buffer pour ne pas modifier le raw
+        buffer = {} # Stocker dans un buffer pour ne pas modifier le raw
         
-        for key, index in self.INDEX_DS4["digital"]:
+        for key in self.INDEX_DS4["digital"]:
+            index = list(self.INDEX_DS4["digital"].keys()).index(key)
             buffer[key] = True if raw[index]==1 else False # Stocker True ou False 
 
-        for key, index in self.INDEX_DS4["analogue"]:
-            bit1 = raw[index]
-            bit2 = raw[index+1]
+        for key in self.INDEX_DS4["analogue"]:
+            index = list(self.INDEX_DS4["analogue"].keys()).index(key)
+            bit1 = int(raw[index], 16)
+            bit2 = int(raw[index+1], 16)
             buffer[key] = Event.base16_vers_pourcent(bit1, bit2) # Base 16 vers pourcentage
+
+        print(buffer)
 
         buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0x01)
         buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["LEFT_RIGHT"]] == 0xFF)
@@ -89,3 +93,5 @@ class Event:
         return pourcentage
 
 
+ev = Event(sample)
+print(ev.data)
