@@ -31,7 +31,7 @@ class Event:
         },
         "autre": {
             "L_R": 188,
-            "U_D": 190
+            "U_D": 196
         }
     }
 
