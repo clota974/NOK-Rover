@@ -41,8 +41,9 @@ class Event:
     def __init__(self, raw):
         self.raw = raw
 
-        # FILTRE
+        self.spam = True
         if(raw[5] == 0):
+            self.spam = False
             self.analyserDS4(self.raw) # 
 
 
