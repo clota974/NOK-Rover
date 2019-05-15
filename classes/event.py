@@ -68,8 +68,8 @@ class Event:
 
         buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0x01)
         buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0xFF)
-        buffer["UP"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0x01)
-        buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0xFF)
+        buffer["UP"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0x01)
+        buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0xFF)
 
         self.data = buffer
 
