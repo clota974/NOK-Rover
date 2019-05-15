@@ -54,10 +54,10 @@ class Event:
         for key in self.INDEX_DS4["digital"]:
             index = list(self.INDEX_DS4["digital"].keys()).index(key)
             index = self.INDEX_DS4["digital"][key]
-            buffer[key] = 1 if raw[index]==1 else 0 # Stocker True ou False 
+            buffer[key] =  (raw[index]==1) # Stocker True ou False 
 
         for key in self.INDEX_DS4["analogue"]:
-            index = list(self.INDEX_DS4["analogue"].keys()).index(key)
+            index = self.INDEX_DS4["analogue"][key]
             try:
                 bit1 = raw[index]
                 bit2 = raw[index+1]
