@@ -41,6 +41,8 @@ class Event:
     def __init__(self, raw):
         self.raw = raw
 
+        print(raw[4])
+
         self.analyserDS4(self.raw)
 
 
