@@ -41,9 +41,9 @@ class Event:
     def __init__(self, raw):
         self.raw = raw
 
-        print(raw[4])
-
-        self.analyserDS4(self.raw)
+        # FILTRE
+        if(raw[5] == 0):
+            self.analyserDS4(self.raw) # 
 
 
     def analyserDS4(self, raw):
