@@ -81,8 +81,8 @@ class Event:
         for key in self.INDEX_DS4["digital"]:
             try:
                 print("Key :" + key)
-                print("Data :" + self.data[key])
-                print("Hist :" + self.historique[key])
+                print(self.data[key])
+                print(self.historique[key])
                 self.changement[key] = (self.data[key] != self.historique[key])
             except:
                 print("Exception")
