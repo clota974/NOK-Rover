@@ -36,6 +36,20 @@ class Event:
     }
 
     historique = {
+        "CAR": 0,
+        "CRO": 0,
+        "RON": 0,
+        "TRI": 0,
+        "L1": 0,
+        "R1": 0,
+        "L2D": 0,
+        "R2D": 0,
+        "SHA": 0,
+        "OPT": 0,
+        "L3": 0,
+        "R3": 0,
+        "PS": 0,
+        "TRA": 0
     }
 
     def __init__(self, raw):
@@ -49,7 +63,7 @@ class Event:
 
 
     def analyserDS4(self, raw):
-        self.historique = self.historique
+        self.historique = self.data
 
         buffer = {} 
 
