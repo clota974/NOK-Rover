@@ -1,3 +1,5 @@
+# pylint: disable=import-error
+
 from classes.moteur import Moteur
 from classes.buzzer import Buzzer
 from classes.led import Led
@@ -26,10 +28,10 @@ adresses = {
 }
 
 class Voiture :
-    led = Led(adresses.Flash)
-    moteurG = Moteur(adresses.AIN1, adresses.AIN2, adresses.PWMA)
-    moteurD = Moteur(adresses.BIN1, adresses.BIN2, adresses.PWMB)
-    buzzer = Buzzer(adresses.buzzer)
+    led = Led(adresses["Flash"])
+    moteurG = Moteur(adresses["AIN1"], adresses["AIN2"], adresses["PWMA"])
+    moteurD = Moteur(adresses["BIN1"], adresses["BIN2"], adresses["PWMB"])
+    buzzer = Buzzer(adresses["buzzer"])
 
     def __init__(self):
         # Ecran vert
