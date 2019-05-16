@@ -28,6 +28,8 @@ adresses = {
     "Blue +" : 19   
 }
 
+GPIO.setmode(GPIO.BCM)
+
 class Voiture :
     led = Led(adresses["Flash"])
     moteurG = Moteur(adresses["AIN1"], adresses["AIN2"], adresses["PWMA"])
@@ -36,8 +38,6 @@ class Voiture :
 
     def __init__(self):
         # Ecran vert
-
-        GPIO.setmode(GPIO.BCM)
 
         self.led.marche_led(100)
 
