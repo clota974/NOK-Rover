@@ -49,7 +49,7 @@ class Event:
 
 
     def analyserDS4(self, raw):
-        self.data = self.historique
+        self.historique = self.historique
 
         buffer = {} 
 
