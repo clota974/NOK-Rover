@@ -80,8 +80,11 @@ class Event:
         for key in self.INDEX_DS4["digital"]:
             try:
                 self.changement[key] = (self.data[key] != self.historique[key])
+                print("Key :" + key)
+                print("Data :" + self.data[key])
+                print("Hist :" + self.historique[key])
             except:
-                print("Exception")
+                print("Data Exception")
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):
