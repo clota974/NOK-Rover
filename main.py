@@ -65,6 +65,6 @@ while True:
     if(DEBUG):
         logEvData(evt.data)
 
-    voiture.interagir(evt)
+    voiture.interagir(evt.data)
 
     sys.stdout.flush()
