@@ -12,7 +12,7 @@ class Buzzer :
             a_PWM (int): 
         """
         GPIO.setup(a_PWM, GPIO.OUT)
-        self.PWM = GPIO.PWM(a_PWM, 1024)
+        self.PWM = GPIO.PWM(a_PWM, 2048)
         self.PWM.start(self.allume)
 
 
@@ -27,5 +27,5 @@ class Buzzer :
             etat (bool): la frequence est invariable
         """
         self.allume = etat
-        pourcentage = 100 if etat else 0
+        pourcentage = 50 if etat else 0 # 50 afin d'imiter une sinusoide
         self.PWM.ChangeDutyCycle(pourcentage)
