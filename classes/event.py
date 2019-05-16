@@ -45,7 +45,7 @@ class Event:
         if(raw[5] == 0):
             self.spam = False
             self.analyserDS4(self.raw) #
-            self.comparer()
+            
 
 
     def analyserDS4(self, raw):
@@ -73,6 +73,7 @@ class Event:
         buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0xFF)
 
         self.data = buffer
+        self.comparer()
 
     def comparer(self):
         self.changement = {}
