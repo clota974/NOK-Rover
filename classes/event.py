@@ -36,7 +36,6 @@ class Event:
     }
 
     historique = {
-        "DS4": {}
     }
 
     def __init__(self, raw):
@@ -49,10 +48,11 @@ class Event:
 
 
     def analyserDS4(self, raw):
+        self.data = self.historique
+
         buffer = {} 
 
         for key in self.INDEX_DS4["digital"]:
-            index = list(self.INDEX_DS4["digital"].keys()).index(key)
             index = self.INDEX_DS4["digital"][key]
             buffer[key] =  (raw[index]==1) # Stocker True ou False 
 
@@ -72,6 +72,12 @@ class Event:
         buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0xFF)
 
         self.data = buffer
+
+    def comparer(self):
+        self.changement = {}
+
+        for key in self.INDEX_DS4["digital"]:
+            self.changement[key] = (self.data[key] != self.historique[key])
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):

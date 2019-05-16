@@ -41,7 +41,8 @@ class Voiture :
 
         self.led.marche_led(100)
 
-    def interagir(self, data):
+    def interagir(self, evt):
+        data = evt.data
         
         #LED
         ledVal = 100 if data["CAR"] else 0

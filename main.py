@@ -63,8 +63,9 @@ while True:
         continue # Ne pas faire attention au spam
     
     if(DEBUG):
-        logEvData(evt.data)
+        logEvData(evt.changement)
 
-    voiture.interagir(evt.data)
+
+    voiture.interagir(evt)
 
     sys.stdout.flush()

@@ -29,3 +29,6 @@ class Buzzer :
         self.allume = etat
         pourcentage = 50 if etat else 0 # 50 afin d'imiter une sinusoide
         self.PWM.ChangeDutyCycle(pourcentage)
+
+    def inverse(self):
+        self.marche_buzzer(not etat)
