@@ -7,6 +7,8 @@ class Led :
     
     def __init__(self, a_PWM):
         self.clignotement = 0
+        
+        GPIO.setup(a_PWM, GPIO.OUT)
         self.PWM = GPIO.PWM(a_PWM, 1) #GPIO clignotement 
         self.PWM.start(self.clignotement)
 

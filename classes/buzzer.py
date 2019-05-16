@@ -11,6 +11,7 @@ class Buzzer :
             self
             a_PWM (int): 
         """
+        GPIO.setup(a_PWM, GPIO.OUT)
         self.PWM = GPIO.PWM(a_PWM, 1024)
         self.PWM.start(self.allume)
 
