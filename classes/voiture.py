@@ -12,7 +12,7 @@ adresses = {
     "BIN1": 15,
     "BIN2" : 14,
     "PWMB" : 4,
-    "Buzzer +" : 22,
+    "Buzzer" : 22,
     "Flash": 23,
     "Push button 1" : 24,
     "V0" : 10,
