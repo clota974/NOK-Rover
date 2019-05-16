@@ -35,7 +35,7 @@ class Event:
         }
     }
 
-    historique = {
+    historiqueVide = {
         "CAR": 0,
         "CRO": 0,
         "RON": 0,
@@ -63,7 +63,7 @@ class Event:
 
 
     def analyserDS4(self, raw):
-        self.historique = self.data
+        self.historique = self.data or self.historiqueVide # pylint: disable=access-member-before-definition
 
         buffer = {} 
 
