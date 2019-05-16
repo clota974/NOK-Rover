@@ -34,7 +34,7 @@ class Voiture :
     led = Led(adresses["Flash"])
     moteurG = Moteur(adresses["AIN1"], adresses["AIN2"], adresses["PWMA"])
     moteurD = Moteur(adresses["BIN1"], adresses["BIN2"], adresses["PWMB"])
-    buzzer = Buzzer(adresses["buzzer"])
+    buzzer = Buzzer(adresses["Buzzer"])
 
     def __init__(self):
         # Ecran vert
