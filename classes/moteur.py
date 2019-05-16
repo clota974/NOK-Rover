@@ -1,7 +1,6 @@
 # pylint: disable=import-error
 import RPi.GPIO as GPIO
 
-
 class Moteur :
     #marche 
     

@@ -1,6 +1,6 @@
-from moteur import Moteur
-from buzzer import Buzzer
-from led import Led
+from classes.moteur import Moteur
+from classes.buzzer import Buzzer
+from classes.led import Led
 
 adresses = {
     "PWMA": 27,
