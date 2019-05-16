@@ -46,5 +46,8 @@ class Voiture :
         #LED
         ledVal = 100 if data["CAR"] else 0
         self.led.marche_led(ledVal)
+        
+        #BUZZER
+        self.buzzer.marche_buzzer( data["CRO"] )
 
 

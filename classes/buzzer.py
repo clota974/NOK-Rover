@@ -20,11 +20,11 @@ class Buzzer :
 
     def marche_buzzer(self, etat):
         """
-        mise en route du buzzer
+        Mise en route du buzzer
 
         Args:
             self
-            etat (int): la frequence est invariable
+            etat (bool): la frequence est invariable
         """
         self.allume = etat
         pourcentage = 100 if etat else 0
