@@ -44,7 +44,8 @@ class Event:
         self.spam = True
         if(raw[5] == 0):
             self.spam = False
-            self.analyserDS4(self.raw) # 
+            self.analyserDS4(self.raw) #
+            self.comparer()
 
 
     def analyserDS4(self, raw):
