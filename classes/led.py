@@ -7,10 +7,10 @@ class Led :
     
     def __init__(self, a_PWM):
         self.clignotement = 0
-        self.PWM = GPIO.PWM(a_PWM, 1) #GPIO clignotement #### pylint: disable=undefined-variable
+        self.PWM = GPIO.PWM(a_PWM, 1) #GPIO clignotement 
         self.PWM.start(self.clignotement)
 
-    def marche_led(self,pourcentage): ## Self ! 
+    def marche_led(self,pourcentage):  
         self.clignotement = pourcentage
         self.PWM.ChangeDutyCycle(self.clignotement)
 
@@ -21,5 +21,3 @@ class Led :
             self.PWM.ChangeDutyCycle(100)
         elif self.clignotement > 0:
             self.PWM.ChangeDutyCycle(0)
-
-        ## self.clignotement ?

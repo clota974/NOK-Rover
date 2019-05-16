@@ -1,15 +1,32 @@
 # pylint: disable=import-error
+# pylint: disable=no-name-in-module
 import os, sys, datetime, colored, json
 from time import sleep
 from io import FileIO
 from classes.event import Event
+from classes.voiture import Voiture
+
+DEBUG = True
+
+def logEvData(data):
+    dat = json.dumps(data).replace('"',"")
+    dat = json.dumps(data).replace('{',"")
+    dat = json.dumps(data).replace('}',"")
+    dat = json.dumps(data).replace(',',"")
+    print("\r"+dat, end="")
+    print()
+    print()
+    print()
 
 report_fd = os.open("/dev/input/js1", os.O_RDWR | os.O_NONBLOCK)
 fd = FileIO(report_fd, "rb+", closefd=False)
-
 defBuf = bytearray(230)
 
+voiture = Voiture()
+
 while True:
+    sleep(0.1)
+
     buf = defBuf 
     r = fd.readinto(buf)
     key = []
@@ -41,15 +58,12 @@ while True:
     # print()
     # print()
 
-    ev = Event(buf)
-    if(not ev.spam):
-        dat = json.dumps(ev.data).replace('"',"")
-        dat = json.dumps(ev.data).replace('{',"")
-        dat = json.dumps(ev.data).replace('}',"")
-        dat = json.dumps(ev.data).replace(',',"")
-        print("\r"+dat, end="")
-        print()
-        print()
-        print()
-    sleep(0.1)
+    evt = Event(buf)
+    if evt.spam:
+        continue # Ne pas faire attention au spam
+    
+    if(DEBUG):
+        logEvData(evt.data)
+
+
     sys.stdout.flush()
