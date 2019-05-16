@@ -1,8 +1,9 @@
+# pylint: disable=no-name-in-module
 # pylint: disable=import-error
-
 from classes.moteur import Moteur
 from classes.buzzer import Buzzer
 from classes.led import Led
+import RPi.GPIO as GPIO
 
 adresses = {
     "PWMA": 27,
@@ -35,6 +36,8 @@ class Voiture :
 
     def __init__(self):
         # Ecran vert
+
+        GPIO.setmode(GPIO.BCM)
 
         self.led.marche_led(100)
 
