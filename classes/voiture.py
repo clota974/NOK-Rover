@@ -48,6 +48,9 @@ class Voiture :
         if(evt.changement["CAR"]):
             self.led.inverse()
         
+        if(evt.data["OPT"]):
+            self.led.marche_led(100)
+        
         #BUZZER
         self.buzzer.marche_buzzer( data["CRO"] )
 
