@@ -17,4 +17,4 @@ GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(pin, GPIO.RISING, callback=launch_program)
 
 GPIO.setup(23, GPIO.OUT)
-GPIO.output(23, 1)
+GPIO.PWM(23, 1).start(50)
