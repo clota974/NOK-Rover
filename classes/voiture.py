@@ -45,8 +45,8 @@ class Voiture :
         data = evt.data
         
         #LED
-        if(evt.changement["Flash"]):
-            self.led.marche_led(ledVal)
+        if(evt.changement["CAR"]):
+            self.led.inverse()
         
         #BUZZER
         self.buzzer.marche_buzzer( data["CRO"] )
