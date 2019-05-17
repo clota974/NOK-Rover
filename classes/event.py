@@ -87,6 +87,13 @@ class Event:
                 self.changement[key] = (val != dernierEvt.data[key])
             else:
                 self.changement[key] = True
+        
+        for key in ["UP", "DOWN", "LEFT", "RIGHT"]:
+            val = self.data[key]
+            if(dernierEvt != False):
+                self.changement[key] = (val != dernierEvt.data[key])
+            else:
+                self.changement[key] = True
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):

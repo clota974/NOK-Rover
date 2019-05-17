@@ -23,9 +23,9 @@ adresses = {
     "DB5" : 7,
     "DB6" : 5,
     "DB7" : 6,
-    "Red +" : 12,
-    "Green +" : 13,
-    "Blue +" : 19   
+    "Red" : 12,
+    "Green" : 13,
+    "Blue" : 19   
 }
 
 GPIO.setmode(GPIO.BCM)
@@ -42,21 +42,8 @@ class Voiture :
 
         self.led.start(100)
 
-    def bouger(self, vitesse, lacet):
-        """
-            vitesse_av: Vitesse avant/arrière
-            lacet: déplacement droite/gauche
-        """
-
-        if(lacet != 0): # Tourner à droite
-            vD = (50+lacet/2)/100*vitesse
-            vG = (50-lacet/2)/100*vitesse
-        else:
-            vD = vG = vitesse
-
-        print(vD,vG)
-        self.moteurG.start(vG)
-        self.moteurD.start(vD)
+        LED = [adresses["Red"], adresses["Green"], adresses["Blue"]]
+        GPIO.setup(LED, GPIO.OUT)
 
     def interagir(self, evt):
         data = evt.data
@@ -86,7 +73,48 @@ class Voiture :
         elif(evt.data["L2D"]):
             vitesse = -int((evt.data["L2"] + 100)/2)
 
+        
+        #
+        #### GEAR ####
+        #
+        if(evt.changement["UP"]):
+            self.gear -= 1 if self.gear>1 else 0
+        elif(evt.changement["DOWN"]):
+            self.gear += 1 if self.gear<3 else 0
 
-        self.bouger(vitesse, lacet)
+        #
+        #### LCD BACKLIGHT ####
+        #
+        if self.gear == 1:
+            self.RGB(0,1,0) # Vert
+        elif self.gear == 2:
+            self.RGB(0,0,1) # Bleu
+        elif self.gear == 3:
+            self.RGB(1,0,0) # Rouge
+        else:
+            self.RGB(0,0,0)
+
+    def bouger(self, vitesse, lacet):
+        """
+            vitesse_av: Vitesse avant/arrière
+            lacet: déplacement droite/gauche
+        """
+
+        if(lacet != 0): # Tourner à droite
+            vD = (50+lacet/2)/100*vitesse
+            vG = (50-lacet/2)/100*vitesse
+        else:
+            vD = vG = vitesse
+
+        print(vD,vG)
+        self.moteurG.start(vG)
+        self.moteurD.start(vD)
+    
+    def RGB(self, R,G,B):  
+        GPIO.output(adresses["Red"], R)
+        GPIO.output(adresses["Green"], G)
+        GPIO.output(adresses["Blue"], B)
+    
+
 
 
