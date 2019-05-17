@@ -4,10 +4,10 @@ import subprocess
 
 try:
     def launch_program(arg):
-    ds4drv = subprocess.Popen(["sudo", "ds4drv", "--hidraw"])
-    py = subprocess.Popen("python3", "~/NOK-Rover/main.py")
-    py.wait()
-    ds4drv.kill()
+        ds4drv = subprocess.Popen(["sudo", "ds4drv", "--hidraw"])
+        py = subprocess.Popen("python3", "~/NOK-Rover/main.py")
+        py.wait()
+        ds4drv.kill()
 
 
     pin = 24
