@@ -1,6 +1,6 @@
 # pylint: disable=import-error
 import RPi.GPIO as GPIO
-import subprocess
+import subprocess, sys
 
 try:
     def launch_program(arg):
@@ -20,5 +20,10 @@ try:
     GPIO.setup(23, GPIO.OUT)
     pwm = GPIO.PWM(23, 1)
     pwm.start(50)
+    input("Enter any key to quit.")
+ 
+    # sys.exit() is used to make the program quits. ( duh )
+    sys.exit()
+
 except Exception as e:
     print(e)
