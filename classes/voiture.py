@@ -160,9 +160,10 @@ class Voiture :
             lacet: déplacement droite/gauche
         """
 
+        default = 5 if lacet>0 else -5
         if(lacet != 0): # Tourner à droite
-            vD = (50+lacet/2)/100*vitesse or 5
-            vG = (50-lacet/2)/100*vitesse or 5
+            vD = (50+lacet/2)/100*vitesse or default
+            vG = (50-lacet/2)/100*vitesse or default
         else:
             vD = vG = vitesse
 
