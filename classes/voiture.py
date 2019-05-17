@@ -102,6 +102,9 @@ class Voiture :
         #### EXCTINCTION ####
         #
         if(evt.data["SHA"]):
+            self.RGB(1,1,1)
+            self.led.start(70)
+            sleep(2)
             GPIO.cleanup()
             sys.exit(0)
 
