@@ -30,6 +30,6 @@ class Moteur :
             GPIO.output(self.a_IN1, 1)
             GPIO.output(self.a_IN2, 1)
 
-        self.PWM.ChangeDutyCycle(self.vitesse)
+        self.PWM.ChangeDutyCycle(abs(self.vitesse))
 
 
