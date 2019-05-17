@@ -49,11 +49,11 @@ class Voiture :
         """
 
         if(lacet > 0): # Tourner à droite
-            vD = 50+lacet/2
-            vG = 50-lacet/2
+            vD = (50+lacet/2)*vitesse
+            vG = (50-lacet/2)*vitesse
         elif(lacet < 0): # Tourner à gauche
-            vD = 50-lacet/2
-            vG = 50+lacet/2
+            vD = (50-lacet/2)*vitesse
+            vG = (50+lacet/2)*vitesse
         else:
             vD = vG = vitesse
 
