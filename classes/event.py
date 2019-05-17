@@ -74,7 +74,7 @@ class Event:
 
         for key in self.INDEX_DS4["digital"]:
             if(dernierEvt != False):
-                self.changement[key] = (self.data[key] in locals() and self.data[key] != dernierEvt[key])
+                self.changement[key] = (self.data[key] == True and self.data[key] != dernierEvt[key])
             else:
                 self.changement[key] = self.data[key]
 

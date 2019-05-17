@@ -31,4 +31,4 @@ class Buzzer :
         self.PWM.ChangeDutyCycle(pourcentage)
 
     def inverse(self):
-        self.marche_buzzer(not self.etat)
+        self.marche_buzzer(not self.allume)
