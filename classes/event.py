@@ -91,7 +91,7 @@ class Event:
         for key in ["UP", "DOWN", "LEFT", "RIGHT"]:
             val = self.data[key]
             if(dernierEvt != False):
-                self.changement[key] = (val != dernierEvt.data[key])
+                self.changement[key] = (val is True) and (val != dernierEvt.data[key])
             else:
                 self.changement[key] = True
 

@@ -72,14 +72,17 @@ class Voiture :
             vitesse = int((evt.data["R2"] + 100)/2)
         elif(evt.data["L2D"]):
             vitesse = -int((evt.data["L2"] + 100)/2)
+        
+        vitesse = vitesse/3 * self.gear
+        self.bouger(vitesse, lacet)
 
         
         #
         #### GEAR ####
         #
-        if(evt.changement["UP"]):
+        if(evt.changement["DOWN"]):
             self.gear -= 1 if self.gear>1 else 0
-        elif(evt.changement["DOWN"]):
+        elif(evt.changement["UP"]):
             self.gear += 1 if self.gear<3 else 0
 
         #
