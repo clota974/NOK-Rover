@@ -1,6 +1,7 @@
 # pylint: disable=no-name-in-module
 # pylint: disable=import-error
 import sys
+from time import sleep
 from classes.moteur import Moteur
 from classes.buzzer import Buzzer
 from classes.led import Led
