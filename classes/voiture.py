@@ -101,9 +101,9 @@ class Voiture :
         #### CONTRASTE ####
         #
         if(evt.changement["LEFT"]):
-            self.contrast += 5 if self.contrast>0 else 0
+            self.contrast += 5 if self.contrast<95 else 0
         elif(evt.changement["RIGHT"]):
-            self.contrast -= 5 if self.contrast<95 else 0
+            self.contrast -= 5 if self.contrast>5 else 0
         self.pwm_contrast.ChangeDutyCycle(self.contrast)
 
         #
@@ -124,10 +124,33 @@ class Voiture :
         #### EXCTINCTION ####
         #
         if(evt.data["SHA"]):
-            self.RGB(1,0,0)
             self.led.start(70)
             print("ARRET DEMANDE : FIN DU PROGRAMME")
-            sleep(5)
+
+            self.RGB(1,0,0)
+            self.lcd.clear()
+            self.lcd.message("Extinction dans 5 secs")
+            sleep(1)
+           
+            self.RGB(0,0,1)
+            self.lcd.clear()
+            self.lcd.message("Extinction dans 4 secs")
+            sleep(1)
+            
+            self.RGB(1,0,0)
+            self.lcd.clear()
+            self.lcd.message("Extinction dans 3 secs")
+            sleep(1)
+            
+            self.RGB(0,0,1)
+            self.lcd.clear()
+            self.lcd.message("Extinction dans 2 secs")
+            sleep(1)
+            
+            self.RGB(1,0,0)
+            self.lcd.clear()
+            self.lcd.message("Extinction dans 1 sec")
+            sleep(1)
             GPIO.cleanup()
             sys.exit(0)
 
