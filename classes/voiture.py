@@ -54,7 +54,7 @@ class Voiture :
         self.contrast = 30
         self.pwm_contrast.start(30)
 
-        self.lcd = LCD.Adafruit_RGBCharLCD(adresses["RS"], adresses["EN"], adresses["D4"], adresses["D5"], adresses["D6"], adresses["D7"],
+        self.lcd = LCD.Adafruit_RGBCharLCD(adresses["RS"], adresses["Enable"], adresses["D4"], adresses["D5"], adresses["D6"], adresses["D7"],
                            16, 2, adresses["Red"], adresses["Green"], adresses["Blue"])
 
     def interagir(self, evt):
