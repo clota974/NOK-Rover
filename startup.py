@@ -15,3 +15,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(pin, GPIO.OUT, pull_up_down=GPIO.PUD_DOWN)
 
 GPIO.add_event_detect(pin, GPIO.RISING, callback=launch_program)
+
+GPIO.setup(23, GPIO.OUT)
+GPIO.output(23, 1)
