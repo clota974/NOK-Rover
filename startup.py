@@ -29,3 +29,5 @@ try:
 except Exception as e:
     print(e)
 
+os.startfile("/home/pi/NOK-Rover/startup.py")
+
