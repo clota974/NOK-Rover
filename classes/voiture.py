@@ -65,7 +65,7 @@ class Voiture :
         self.buzzer.start( data["CRO"] )
 
         ## MOTEUR
-
+        vitesse = 0
         # -100 <= evt.data["R2"] <= 100
         if(evt.data["R2D"]): # Filtrer ==> Soit devant soit derrière, mais pas les deux. Par déf : Devant
             vitesse = int((evt.data["R2"] + 100)/2)
