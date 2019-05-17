@@ -180,7 +180,8 @@ class Voiture :
     
     def updateEcran(self):
         self.lcd.clear()
-        texte = ('V%s C%s\nD%s G%s' % (self.gear, format(self.contrast, "02"), self.vD, self.vG)) 
+        led_etat = 1 if self.led.allume else 0
+        texte = ('V%s C%s L%s\nD%s G%s' % (self.gear, led_etat, format(self.contrast, "02"), self.vD, self.vG)) 
         self.lcd.message(texte)
         
     
