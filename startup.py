@@ -4,6 +4,7 @@ import subprocess, sys
 
 try:
     def launch_program(arg):
+        print("Starting NOK-Rover")
         ds4drv = subprocess.Popen(["sudo", "ds4drv", "--hidraw"])
         py = subprocess.Popen("python3", "~/NOK-Rover/main.py")
         py.wait()
