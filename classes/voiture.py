@@ -156,7 +156,7 @@ class Voiture :
     
     def updateEcran(self):
         self.lcd.clear()
-        texte = ('V%s C%s\nD%s G%s' % (str(1), format(2, "02"), self.vD, self.vG)) 
+        texte = ('V%s C%s\nD%s G%s' % (self.gear, format(self.contrast, "02"), self.vD, self.vG)) 
         self.lcd.message(texte)
         
     
