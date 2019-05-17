@@ -20,6 +20,9 @@ class Led :
 
     def inverse(self): ## !!!
         if self.clignotement == 0:
-            self.PWM.ChangeDutyCycle(100)
+            self.clignotement = 100
         elif self.clignotement > 0:
-            self.PWM.ChangeDutyCycle(0)
+            self.clignotement = 0
+        
+        self.PWM.ChangeDutyCycle(self.clignotement)
+        
