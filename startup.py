@@ -24,7 +24,7 @@ try:
         pwm = GPIO.PWM(23, 1)
         pwm.start(50)
 
-        sleep(0.1)
+        time.sleep(0.1)
 
 except Exception as e:
     print(e)
