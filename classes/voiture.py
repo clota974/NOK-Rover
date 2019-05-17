@@ -109,10 +109,6 @@ class Voiture :
         else:
             vD = vG = vitesse
 
-        # Minimum de 5
-        vD = 5 if vD<5 else vD
-        vG = 5 if vG<5 else vG
-
         print(vD,vG)
         self.moteurG.start(vG)
         self.moteurD.start(vD)
