@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO
 import subprocess
 
-def launch_program():
+def launch_program(arg):
     ds4drv = subprocess.Popen(["sudo", "ds4drv", "--hidraw"])
     py = subprocess.Popen("python3", "~/NOK-Rover/main.py")
     py.wait()
