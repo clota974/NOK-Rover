@@ -14,7 +14,7 @@ class Moteur :
         GPIO.setup(self.a_IN2, GPIO.OUT)
         GPIO.setup(self.a_PWM, GPIO.OUT)
 
-        self.PWM = GPIO.PWM(a_PWM, 1)
+        self.PWM = GPIO.PWM(a_PWM, 980)
         self.PWM.start(self.vitesse)
 
     def start(self, vitesse):
