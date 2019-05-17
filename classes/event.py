@@ -78,6 +78,13 @@ class Event:
                 self.changement[key] = (val is True) and (val != dernierEvt.data[key])
             else:
                 self.changement[key] = val
+        
+        for key in self.INDEX_DS4["analogue"]:
+            val = self.data[key]
+            if(dernierEvt != False):
+                self.changement[key] = (val != dernierEvt.data[key])
+            else:
+                self.changement[key] = True
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):
