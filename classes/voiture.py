@@ -103,6 +103,7 @@ class Voiture :
         #
         if(evt.data["SHA"]):
             GPIO.cleanup()
+            sys.exit(0)
 
     def bouger(self, vitesse, lacet):
         """
