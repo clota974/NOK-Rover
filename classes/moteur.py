@@ -20,10 +20,10 @@ class Moteur :
     def start(self, vitesse):
         self.vitesse = vitesse
 
-        if(vitesse > 0):
+        if(vitesse < 0):
             GPIO.output(self.a_IN1, 0)
             GPIO.output(self.a_IN2, 1)
-        elif(vitesse < 0):
+        elif(vitesse > 0):
             GPIO.output(self.a_IN1, 1)
             GPIO.output(self.a_IN2, 0)
         else: # If vitesse==0

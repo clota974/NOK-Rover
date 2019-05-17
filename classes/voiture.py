@@ -48,30 +48,48 @@ class Voiture :
             lacet: déplacement droite/gauche
         """
 
-        self.moteurG.start(vitesse)
-        self.moteurD.start(vitesse)
+        if(lacet > 0): # Tourner à droite
+            vD = 50+lacet/2
+            vG = 50-lacet/2
+        elif(lacet < 0): # Tourner à gauche
+            vD = 50-lacet/2
+            vG = 50+lacet/2
+        else:
+            vD = vG = vitesse
+
+
+        self.moteurG.start(vG)
+        self.moteurD.start(vD)
 
     def interagir(self, evt):
         data = evt.data
         
-        #LED
+        #
+        #### LED ####
+        #
         if(evt.changement["CAR"]):
             self.led.inverse()
         
         if(evt.data["OPT"]):
             self.led.start(100)
         
-        #BUZZER
+        #
+        #### BUZZER ####
+        #
         self.buzzer.start( data["CRO"] )
 
-        ## MOTEUR
+        #
+        #### MOTEUR ####
+        #
         vitesse = 0
+        lacet = evt.data["R_X"]
         # -100 <= evt.data["R2"] <= 100
         if(evt.data["R2D"]): # Filtrer ==> Soit devant soit derrière, mais pas les deux. Par déf : Devant
             vitesse = int((evt.data["R2"] + 100)/2)
         elif(evt.data["L2D"]):
             vitesse = -int((evt.data["L2"] + 100)/2)
 
-        self.bouger(vitesse, 0)
+
+        self.bouger(vitesse, lacet)
 
 
