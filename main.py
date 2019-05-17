@@ -72,4 +72,5 @@ while True:
 
     voiture.interagir(evt)
 
+    dernierEvt = evt
     sys.stdout.flush()
