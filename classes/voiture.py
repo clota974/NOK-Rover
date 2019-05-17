@@ -6,6 +6,8 @@ from classes.moteur import Moteur
 from classes.buzzer import Buzzer
 from classes.led import Led
 import RPi.GPIO as GPIO
+import Adafruit_CharLCD as LCD
+
 
 adresses = {
     "PWMA": 27,
@@ -44,8 +46,13 @@ class Voiture :
 
         self.led.start(100)
 
-        LED = [adresses["Red"], adresses["Green"], adresses["Blue"]]
-        GPIO.setup(LED, GPIO.OUT)
+        outputs = [adresses["Red"], adresses["Green"], adresses["Blue"], adresses["V0"]]
+        GPIO.setup(outputs, GPIO.OUT)
+
+        # Contraste de l'écran LCD
+        self.pwm_contrast = GPIO.PWM(adresses["V0"], 980)
+        self.contrast = 30
+        self.pwm_contrast.start(30)
 
     def interagir(self, evt):
         data = evt.data
@@ -86,6 +93,15 @@ class Voiture :
             self.gear -= 1 if self.gear>1 else 0
         elif(evt.changement["UP"]):
             self.gear += 1 if self.gear<3 else 0
+        
+        #
+        #### CONTRASTE ####
+        #
+        if(evt.changement["LEFT"]):
+            self.contrast -= 5 if self.contrast>0 else 0
+        elif(evt.changement["RIGHT"]):
+            self.contrast += 5 if self.contrast<100 else 0
+        self.pwm_contrast.ChangeDutyCycle(self.contrast)
 
         #
         #### LCD BACKLIGHT ####
@@ -98,6 +114,7 @@ class Voiture :
             self.RGB(1,0,0) # Rouge
         else:
             self.RGB(0,0,0)
+        
         
         #
         #### EXCTINCTION ####
