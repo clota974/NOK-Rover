@@ -1,5 +1,6 @@
 # pylint: disable=no-name-in-module
 # pylint: disable=import-error
+import sys
 from classes.moteur import Moteur
 from classes.buzzer import Buzzer
 from classes.led import Led
@@ -96,6 +97,12 @@ class Voiture :
             self.RGB(1,0,0) # Rouge
         else:
             self.RGB(0,0,0)
+        
+        #
+        #### EXCTINCTION ####
+        #
+        if(evt.data["SHA"]):
+            GPIO.cleanup()
 
     def bouger(self, vitesse, lacet):
         """
