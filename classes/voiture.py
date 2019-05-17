@@ -104,8 +104,8 @@ class Voiture :
         """
 
         if(lacet != 0): # Tourner à droite
-            vD = (50+lacet/2)/100*vitesse
-            vG = (50-lacet/2)/100*vitesse
+            vD = (50+lacet/2)/100*vitesse or 5
+            vG = (50-lacet/2)/100*vitesse or 5
         else:
             vD = vG = vitesse
 
