@@ -105,6 +105,7 @@ class Voiture :
         if(evt.data["SHA"]):
             self.RGB(1,0,0)
             self.led.start(70)
+            print(colored.bg("green")+"ARRET DEMANDE"+colored.reset())
             sleep(5)
             GPIO.cleanup()
             sys.exit(0)
