@@ -35,11 +35,21 @@ class Voiture :
     moteurG = Moteur(adresses["AIN1"], adresses["AIN2"], adresses["PWMA"])
     moteurD = Moteur(adresses["BIN1"], adresses["BIN2"], adresses["PWMB"])
     buzzer = Buzzer(adresses["Buzzer"])
+    gear = 1 # 1 à 3
 
     def __init__(self):
         # Ecran vert
 
-        self.led.marche_led(100)
+        self.led.start(100)
+
+    def bouger(self, vitesse, lacet):
+        """
+            vitesse_av: Vitesse avant/arrière
+            lacet: déplacement droite/gauche
+        """
+
+        self.moteurG.start(vitesse)
+        self.moteurD.start(vitesse)
 
     def interagir(self, evt):
         data = evt.data
@@ -49,9 +59,15 @@ class Voiture :
             self.led.inverse()
         
         if(evt.data["OPT"]):
-            self.led.marche_led(100)
+            self.led.start(100)
         
         #BUZZER
-        self.buzzer.marche_buzzer( data["CRO"] )
+        self.buzzer.start( data["CRO"] )
+
+        ## MOTEUR
+
+        # -100 <= evt.data["R2"] <= 100
+        vitesse = int((evt.data["R2"] + 100)/2)
+        self.bouger(vitesse, 0)
 
 

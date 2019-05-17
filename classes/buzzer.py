@@ -18,7 +18,7 @@ class Buzzer :
 
 
 
-    def marche_buzzer(self, etat):
+    def start(self, etat):
         """
         Mise en route du buzzer
 
@@ -31,4 +31,4 @@ class Buzzer :
         self.PWM.ChangeDutyCycle(pourcentage)
 
     def inverse(self):
-        self.marche_buzzer(not self.allume)
+        self.start(not self.allume)

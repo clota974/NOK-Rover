@@ -17,7 +17,7 @@ class Moteur :
         self.PWM = GPIO.PWM(a_PWM, 1)
         self.PWM.start(self.vitesse)
 
-    def marche_moteur(self, vitesse):
+    def start(self, vitesse):
         self.vitesse = vitesse
 
         if(vitesse > 0):
