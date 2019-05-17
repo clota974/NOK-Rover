@@ -62,8 +62,8 @@ while True:
 
     evt = Event(buf)
     if evt.spam:
-        continue # Ne pas faire attention au spam
-    
+        evt = dernierEvt
+
     evt.comparer(dernierEvt)
 
     if(DEBUG):
