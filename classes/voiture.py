@@ -69,7 +69,7 @@ class Voiture :
         # -100 <= evt.data["R2"] <= 100
         if(evt.data["R2D"]): # Filtrer ==> Soit devant soit derrière, mais pas les deux. Par déf : Devant
             vitesse = int((evt.data["R2"] + 100)/2)
-        elif(evt.data["L2D"])
+        elif(evt.data["L2D"]):
             vitesse = -int((evt.data["R2"] + 100)/2)
 
         self.bouger(vitesse, 0)
