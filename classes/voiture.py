@@ -101,9 +101,9 @@ class Voiture :
         #### CONTRASTE ####
         #
         if(evt.changement["LEFT"]):
-            self.contrast -= 5 if self.contrast>0 else 0
+            self.contrast += 5 if self.contrast>0 else 0
         elif(evt.changement["RIGHT"]):
-            self.contrast += 5 if self.contrast<100 else 0
+            self.contrast -= 5 if self.contrast<95 else 0
         self.pwm_contrast.ChangeDutyCycle(self.contrast)
 
         #
@@ -118,7 +118,8 @@ class Voiture :
         else:
             self.RGB(0,0,0)
         
-        
+        self.updateEcran()
+
         #
         #### EXCTINCTION ####
         #
@@ -143,6 +144,8 @@ class Voiture :
             vD = vG = vitesse
 
         print(vD,vG)
+        self.vD = format(int(vD), "03")
+        self.vG = format(int(vG), "03")
         self.moteurG.start(vG)
         self.moteurD.start(vD)
     
@@ -150,6 +153,11 @@ class Voiture :
         GPIO.output(adresses["Red"], R)
         GPIO.output(adresses["Green"], G)
         GPIO.output(adresses["Blue"], B)
+    
+    def updateEcran(self):
+        texte = ('V%s C%s\nD%s G%s' % (self.gear, format(self.contrast, "O2", self.vD, self.vG)) 
+        self.lcd.message(texte)
+        
     
 
 
