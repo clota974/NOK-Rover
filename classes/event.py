@@ -35,23 +35,6 @@ class Event:
         }
     }
 
-    historiqueVide = {
-        "CAR": 0,
-        "CRO": 0,
-        "RON": 0,
-        "TRI": 0,
-        "L1": 0,
-        "R1": 0,
-        "L2D": 0,
-        "R2D": 0,
-        "SHA": 0,
-        "OPT": 0,
-        "L3": 0,
-        "R3": 0,
-        "PS": 0,
-        "TRA": 0
-    }
-
     def __init__(self, raw):
         self.raw = raw
 
@@ -63,8 +46,6 @@ class Event:
 
 
     def analyserDS4(self, raw):
-        self.historique = self.data or self.historiqueVide # pylint: disable=access-member-before-definition
-
         buffer = {} 
 
         for key in self.INDEX_DS4["digital"]:
@@ -87,19 +68,15 @@ class Event:
         buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0xFF)
 
         self.data = buffer
-        self.comparer()
 
-    def comparer(self):
+    def comparer(self, dernierEvt):
         self.changement = {}
 
         for key in self.INDEX_DS4["digital"]:
-            try:
-                print("Key :" + key)
-                print(self.data[key])
-                print(self.historique[key])
-                self.changement[key] = (self.data[key] != self.historique[key])
-            except:
-                print("Exception")
+            if(dernierEvt != False):
+                self.changement[key] = (self.data[key] != dernierEvt[key])
+            else:
+                self.changement[key] = self.data[key]
 
     @staticmethod
     def base16_vers_pourcent(bit1, bit2):

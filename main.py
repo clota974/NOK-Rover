@@ -24,6 +24,8 @@ defBuf = bytearray(230)
 
 voiture = Voiture()
 
+dernierEvt = False
+
 while True:
     sleep(0.1)
 
@@ -62,6 +64,8 @@ while True:
     if evt.spam:
         continue # Ne pas faire attention au spam
     
+    evt.comparer(dernierEvt)
+
     if(DEBUG):
         logEvData(evt.changement)
 
