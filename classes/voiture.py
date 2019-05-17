@@ -57,7 +57,7 @@ class Voiture :
         else:
             vD = vG = vitesse
 
-
+        print(vD,vG)
         self.moteurG.start(vG)
         self.moteurD.start(vD)
 
@@ -82,7 +82,7 @@ class Voiture :
         #### MOTEUR ####
         #
         vitesse = 0
-        lacet = evt.data["R_X"]
+        lacet = evt.data["L_X"]
         # -100 <= evt.data["R2"] <= 100
         if(evt.data["R2D"]): # Filtrer ==> Soit devant soit derrière, mais pas les deux. Par déf : Devant
             vitesse = int((evt.data["R2"] + 100)/2)
