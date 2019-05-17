@@ -155,7 +155,7 @@ class Voiture :
         GPIO.output(adresses["Blue"], B)
     
     def updateEcran(self):
-        texte = ('V%s C%s\nD%s G%s' % (self.gear, format(self.contrast, "O2"), self.vD, self.vG)) 
+        texte = ('V%s C%s\nD%s G%s' % (str(self.gear), format(self.contrast, "O2"), self.vD, self.vG)) 
         self.lcd.message(texte)
         
     
