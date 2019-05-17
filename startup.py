@@ -12,7 +12,7 @@ def launch_program():
 pin = 24
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(pin, GPIO.OUT, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 GPIO.add_event_detect(pin, GPIO.RISING, callback=launch_program)
 
