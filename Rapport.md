@@ -5,7 +5,7 @@
 
 <p><em>La lecture est aussi possible depuis le répertoire GitHub suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></em></p>
 <h1 id="rapport---nok-rover">Rapport - NOK-Rover</h1>
-<p><em>En route vers 127.0.0.1 à bord du NOK-Rover piloté par les capitaines Nils, Olivia et Killian.</em></p>
+<p><em>En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines <strong>Nils, Olivia et Killian</strong>.</em></p>
 <hr>
 <p><strong>rover</strong>  [\ʁɔ.vœʁ] <em>masculin</em></p>
 <ol>
@@ -18,7 +18,101 @@
 <h2 id="b-pourquoi-ce-projet-nous-intéresse-t-il-">b) Pourquoi ce projet nous intéresse-t-il ?</h2>
 <p>Suite au mini-projet, durant lequel nous avons programmé avec une interface CLI. Nous souhaitions réaliser un projet qui était en interaction avec le réel. Pouvoir toucher notre projet de nos propres mains. De plus, mettre en oeuvre un tel projet nous a permis de “tester” nos capacités dans un domaine de découverte.</p>
 <h1 id="ii-cahier-des-charges">II) Cahier des charges</h1>
-<h2 id="mapping-des-touches">Mapping des touches</h2>
+<h2 id="electronique">Electronique</h2>
+<p><em>Nota Bene :</em> La partie électronique (brochage) est une partie <strong>annexe</strong> à la programmation informatique</p>
+<p>Le schéma de raccordement<sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup> suivant a été réalisé <em>(via Fritzing)</em> :</p>
+<p>Voici un tableau récapitulatif du schéma de raccordement :</p>
+
+<table>
+<thead>
+<tr>
+<th align="right">BCM</th>
+<th>Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">27</td>
+<td>PWMA</td>
+</tr>
+<tr>
+<td align="right">18</td>
+<td>AIN2</td>
+</tr>
+<tr>
+<td align="right">17</td>
+<td>AIN1</td>
+</tr>
+<tr>
+<td align="right">15</td>
+<td>BIN1</td>
+</tr>
+<tr>
+<td align="right">14</td>
+<td>BIN2</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>PWMB</td>
+</tr>
+<tr>
+<td align="right">22</td>
+<td>Buzzer (+)</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td>Flash (-)</td>
+</tr>
+<tr>
+<td align="right">24</td>
+<td>Pushbutton 1 (-)</td>
+</tr>
+<tr>
+<td align="right">25</td>
+<td>Pushbutton 2 (-)</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td>V0 (Contraste LCD)</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td>RS (LCD)</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td>Enable (LCD)</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>DB4 (LCD)</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>DB5 (LCD)</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>DB6 (LCD)</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>DB7 (LCD)</td>
+</tr>
+<tr>
+<td align="right">12</td>
+<td>Rouge + (LCD)</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td>Vert + (LCD)</td>
+</tr>
+<tr>
+<td align="right">23</td>
+<td>Bleu + (LCD)</td>
+</tr>
+</tbody>
+</table><h2 id="mapping-des-touches-manette">Mapping des touches (manette)</h2>
 
 <table>
 <thead>
@@ -84,11 +178,15 @@
 <h2 id="conventions">Conventions</h2>
 <p>Les pourcentages se basent sur des nombres supérieurs à 0.<br>
 L’utilisation des pourcentages en tant que tel a été fixé en accord avec les notations de la fréquence de <code>RPi.GPIO.PWM</code> .</p>
+<p>La notation BCM est utilisée car c’est la notation utilisée par la bibliothèque <code>Adafruit_CharLCD</code> .  Cependant, sur les câbles, la notation ordonnée de pins est utilisée afin de pouvoir reconnecter directement les câbles sans avoir besoin de schéma de raccordement.</p>
 <h2 id="matériel-utilisé">Matériel utilisé</h2>
-<p>Voici la liste du matériel utilisé par le NOK-Rover : <a href="https://www.sparkfun.com/orders/4429576">https://www.sparkfun.com/orders/4429576</a><br>
+<p>Voici la liste du matériel utilisé<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">1</a></sup> par le NOK-Rover : <a href="https://www.sparkfun.com/orders/4429576">https://www.sparkfun.com/orders/4429576</a><br>
 Bien que tous les éléments commandés furent destinés au NOK-Rover, certains n’ont pas été utilisé.</p>
 <h2 id="logiciels-utilisés">Logiciels utilisés</h2>
 <p>Le code sera stocké sur GitHub au répertoire suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></p>
+<p>L’éditeur principalement utilisé sera Visual Studio Code.</p>
+<p>La rédaction du rapport se fera en Markdown via StackEdit (et Google Drive pour le brainstorming).</p>
+<p>Fritzing a été utilisé pour la réalisation des schémas électroniques</p>
 <h1 id="iii-réalisation">III) Réalisation</h1>
 <p>Le programme est séparé en de nombreuses classes, chacune définissant une partie de la voiture. Par exemple, la classe LED détermine l’allumage de celles-ci.</p>
 <h2 id="interaction-avec-la-manette-et-interface-hid">Interaction avec la manette et interface HID</h2>
@@ -162,8 +260,8 @@ La vitesse ne peut être nulle, sa valeur par défaut est 5. Ceci permet d’emp
 <h1 id="répartition-du-travail">Répartition du travail</h1>
 <p>La répartition des tâches prévue au début du projet était la suivante :</p>
 <ul>
-<li>Killian devait s’occuper du traitement des données de la manette et donc de la classe <code>Event</code>. De plus, il s’occupait de donner les tâches à éxécuter par Nils via la partie “Projets” de GitHub.</li>
-<li>Nils devait s’occuper de la création des classes qui intéragissent directement avec les GPIO.</li>
+<li>Killian devait s’occuper du traitement des données de la manette et donc de la classe <code>Event</code>. De plus, il s’occupait de donner les tâches à exécuter par Nils via la partie “Projets” de GitHub.</li>
+<li>Nils devait s’occuper de la création des classes qui interagissent directement avec les GPIO.</li>
 </ul>
 <p>Olivia est arrivée en cours de projet et donc n’a pas pu participer à toute la programmation.</p>
 <p>L’organisation et la répartition des tâches furent modifiées au cours des séances.<br>
@@ -173,9 +271,50 @@ Nils et Olivia, quant à eux, ont réalisé une partie de la programmation ainsi
 <h1 id="v-réalisation">V) Réalisation</h1>
 <p>Les pièces de la voiture nous ont été livrées mi-janvier, l’assemblage de la voiture fut également réalisé en janvier par Killian. Le code quant à lui, fut réalisé en 18 semaines, du 30 janvier jusqu’au 20 mai. Avec une fréquence de travail de l’ordre d’une fois par semaine, le projet…</p>
 <h1 id="vi-fonctionnement">VI) Fonctionnement</h1>
+<p>Le schéma d’utilisation prévue pour la NOK-Rover est dans l’ordre suivant:</p>
+<h2 id="a-mise-en-route">a) Mise en route</h2>
+<ul>
+<li>Démarrage Raspbian ⇒ Exécution du <code>rc.local</code> ⇒ Exécution de <code>startup.py</code>  ⇒ allume la Led et arrête le moteur</li>
+<li>Connexion de la Dualshock 4 en appuyant sur la touche PS (avec éventuellement l’utilitaire <code>bluetoothctl</code> si la connexion n’est pas automatique) ⇒ La LED de la manette devient bleue</li>
+<li>Démarrage de <code>ds4drv</code> (garder ouvert en arrière-plan)</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash"><span class="token function">sudo</span> ds4drv --hidraw
+</code></pre>
+<ul>
+<li>Démarrage du programme dans une autre instance du Terminal</li>
+</ul>
+<pre class=" language-bash"><code class="prism  language-bash">python3 ~/NOK-Rover/main.py 
+</code></pre>
+<h2 id="b-phase-de-croisière">b) Phase de croisière</h2>
+<p>L’utilisation du Rover se fait selon le mapping présenté dans le Cahier des Charges <em>(voir II.a)</em></p>
+<p>Le terminal affichera <code>data.changement</code> et le rapport cyclique de chaque moteur.</p>
+<h4 id="conflits">Conflits</h4>
+<p>Des situations de conflit ont été repérées et sont gérées :</p>
+<ul>
+<li>On appuie sur les touches <code>avancer</code> et <code>reculer</code> en même temps : la voiture avancera.</li>
+<li>On souhaite modifier le contraste de l’écran : la valeur <code>V0</code> du contraste va de 0 à 95 et fixée par défaut à 30. Le pas est de 5. En cas de tentative de dépassement de ces valeurs, le programme refusera la modification.</li>
+<li>Le rapport de vitesse (Gear) va de 1 à 3 et fixé à 1 par défaut. En cas de tentative de dépassement de ces valeurs, le programme refusera la modification.</li>
+</ul>
+<h2 id="c-extinction">c) Extinction</h2>
+<p>En appuyant sur la touche <code>Share</code>, la phase d’extinction est lancée :</p>
+<ul>
+<li>Le Zhell affiche un message d’extinction</li>
+<li>L’exécution du programme est interrompue par <code>time.sleep()</code></li>
+<li>Clignotement des LEDs blanches</li>
+<li>L’écran LCD bascule du rouge au bleu toutes les secondes</li>
+<li>L’écran LCD affiche <code>Extinction dans {x} secs</code></li>
+</ul>
+<p>Après 5 secondes, le programme réinitialise/éteint les GPIO utilisés grâce à <code>GPIO.cleanup()</code> et quitte le programme avec succès grâce à <code>sys.exit(0)</code> .</p>
 <h1 id="vii-amélioration">VII) Amélioration</h1>
 <h1 id="viii-conclusion">VIII) Conclusion</h1>
-<p>Bilan personnel Nils:</p>
-<p>Bilan personnel Olivia:</p>
-<p>Bilan personnel Killian:</p>
+<h3 id="bilan-personnel-nils">Bilan personnel Nils</h3>
+<h3 id="bilan-personnel-olivia">Bilan personnel Olivia</h3>
+<h3 id="bilan-personnel-killian">Bilan personnel Killian</h3>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Conçu par Killian <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
