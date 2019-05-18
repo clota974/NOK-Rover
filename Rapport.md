@@ -1,3 +1,8 @@
+---
+
+
+---
+
 <p><em>La lecture est aussi possible depuis le répertoire GitHub suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></em></p>
 <h1 id="rapport---nok-rover">Rapport - NOK-Rover</h1>
 <p><em>En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines <strong>Nils, Olivia et Killian</strong>.</em></p>
@@ -258,6 +263,13 @@ La vitesse ne peut être nulle, sa valeur par défaut est 5. Ceci permet d’emp
 <p>Le Main est le programme lancé pour démarrer la voiture.<br>
 Il se charge de récupérer les données brutes de la manette   et de les envoyer dans un <code>Event</code> qui interagira ensuite avec la voiture.</p>
 <p>Le Main est aussi chargé de l’affichage des données sur le Terminal.</p>
+<h3 id="diagrammes-heuristiques">Diagrammes heuristiques</h3>
+<h5 id="répartition-des-ressources">Répartition des ressources</h5>
+<p><img src="https://lh3.googleusercontent.com/MCT0pLShU9YOR2m_smfQoYsepvFeyEn9FTv3avmIISQHqoUNStvjtisjs8VsbEaVLV-n7sIjcSspCA" alt="enter image description here" title="Classes"></p>
+<h4 id="traiter-les-données">Traiter les données</h4>
+<p><a href="https://photos.google.com/share/AF1QipP-R9cu_0Sbe2moNtHqwItpQq5XbvMl3L6Fe2HIOAXZzHvWoOy368banXb7aU6oGw/photo/AF1QipOtA9hWWZMWlHnESetATr2QkJo_T7BKprHhvVDI?key=M2lpNi03UzF5ajdzb1VnYzNFUFRhWUpERVdRWDl3">Voir image</a><br>
+<img src="https://lh3.googleusercontent.com/fE9RT3QEdPvv02wywNGH82zQ4iEjL1LfkhC_D4OiXWyHL7qisxo9o2ZLtN1QqI0Ebn4iF6aC1A-k3A" alt="enter image description here"><br>
+<strong>Les schémas sont disponibles dans le dossier <code>NOK-Rover/Schémas</code></strong></p>
 <h1 id="répartition-du-travail">Répartition du travail</h1>
 <p>La répartition des tâches prévue au début du projet était la suivante :</p>
 <ul>
