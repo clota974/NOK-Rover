@@ -183,10 +183,12 @@ L’utilisation des pourcentages en tant que tel a été fixé en accord avec le
 <p>Voici la liste du matériel utilisé<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">1</a></sup> par le NOK-Rover : <a href="https://www.sparkfun.com/orders/4429576">https://www.sparkfun.com/orders/4429576</a><br>
 Bien que tous les éléments commandés furent destinés au NOK-Rover, certains n’ont pas été utilisé.</p>
 <h2 id="logiciels-utilisés">Logiciels utilisés</h2>
+<p>Le code sera écrit en Python (UTF-8) car c’est le seul langage connu par l’entièreté du groupe.</p>
+<p>Un terminal sous Bash permettra l’exécution du programme.</p>
 <p>Le code sera stocké sur GitHub au répertoire suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></p>
 <p>L’éditeur principalement utilisé sera Visual Studio Code.</p>
 <p>La rédaction du rapport se fera en Markdown via StackEdit (et Google Drive pour le brainstorming).</p>
-<p>Fritzing a été utilisé pour la réalisation des schémas électroniques</p>
+<p>Fritzing a été utilisé pour la réalisation des schémas électroniques.</p>
 <h1 id="iii-réalisation">III) Réalisation</h1>
 <p>Le programme est séparé en de nombreuses classes, chacune définissant une partie de la voiture. Par exemple, la classe LED détermine l’allumage de celles-ci.</p>
 <h2 id="interaction-avec-la-manette-et-interface-hid">Interaction avec la manette et interface HID</h2>
@@ -257,6 +259,10 @@ Afin d’achever cette conversion de boutisme, le code suivant a été instauré
 </code></pre>
 <p>La vitesse du moteur est donc défini par la formule <code>(50±lacet/2)/100*vitesse</code>.<br>
 La vitesse ne peut être nulle, sa valeur par défaut est 5. Ceci permet d’empêcher le blocage des roues, lors du pivot.</p>
+<h2 id="main">Main</h2>
+<p>Le Main est le programme lancé pour démarrer la voiture.<br>
+Il se charge de récupérer les données brutes de la manette   et de les envoyer dans un <code>Event</code> qui interagira ensuite avec la voiture.</p>
+<p>Le Main est aussi chargé de l’affichage des données sur le Terminal.</p>
 <h1 id="répartition-du-travail">Répartition du travail</h1>
 <p>La répartition des tâches prévue au début du projet était la suivante :</p>
 <ul>
