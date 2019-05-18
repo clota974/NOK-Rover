@@ -129,27 +129,27 @@ class Voiture :
 
             self.RGB(1,0,0)
             self.lcd.clear()
-            self.lcd.message("Extinction dans 5 secs")
+            self.lcd.message("Extinction dans\n5 secs")
             sleep(1)
            
             self.RGB(0,0,1)
             self.lcd.clear()
-            self.lcd.message("Extinction dans 4 secs")
+            self.lcd.message("Extinction dans\n4 secs")
             sleep(1)
             
             self.RGB(1,0,0)
             self.lcd.clear()
-            self.lcd.message("Extinction dans 3 secs")
+            self.lcd.message("Extinction dans\n3 secs")
             sleep(1)
             
             self.RGB(0,0,1)
             self.lcd.clear()
-            self.lcd.message("Extinction dans 2 secs")
+            self.lcd.message("Extinction dans\n2 secs")
             sleep(1)
             
             self.RGB(1,0,0)
             self.lcd.clear()
-            self.lcd.message("Extinction dans 1 sec")
+            self.lcd.message("Extinction dans\n1 sec")
             sleep(1)
             GPIO.cleanup()
             sys.exit(0)
