@@ -110,7 +110,7 @@ class Event:
             int: Le pourcentage
         """
 
-        valeur = (bit2<<2*4)+bit1 # Arrange les bits selon l'ordre correct (Little-endian --> Big-endian)
+        valeur = (bit2<<2*4)+bit1 # Arrange les bits selon l'ordre correct (Petit-boutiste --> Grand-boutiste)
         
         if valeur & 0x8000 > 0: # Si la valeur est négative
             valeur -= 0x10000
@@ -120,6 +120,7 @@ class Event:
         pourcentage = valeur/max16*100
 
         return int(pourcentage)
+
 
 ev = Event(sample)
 print(ev.data)
