@@ -24,10 +24,16 @@ try:
         pwm = GPIO.PWM(23, 1)
         pwm.start(50)
 
+        # Eteindre les roues
+        GPIO.setup([14,15,17,18], GPIO.OUT)
+        GPIO.output(14, 1)
+        GPIO.output(15, 1)
+        GPIO.output(17, 1)
+        GPIO.output(18, 1)
+
         time.sleep(0.1)
 
 except Exception as e:
     print(e)
 
-os.startfile("/home/pi/NOK-Rover/startup.py")
 
