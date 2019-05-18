@@ -1,3 +1,8 @@
+---
+
+
+---
+
 <p><em>La lecture est aussi possible depuis le répertoire GitHub suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></em></p>
 <h1 id="rapport---nok-rover">Rapport - NOK-Rover</h1>
 <p><em>En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines <strong>Nils, Olivia et Killian</strong>.</em></p>
@@ -15,7 +20,7 @@
 <h1 id="ii-cahier-des-charges">II) Cahier des charges</h1>
 <h2 id="electronique">Electronique</h2>
 <p><em>Nota Bene :</em> La partie électronique (brochage) est une partie <strong>annexe</strong> à la programmation informatique</p>
-<p>Le schéma de raccordement<sup class="footnote-ref"><a href="#fn1" id="fnref1">1</a></sup> suivant a été réalisé <em>(via Fritzing)</em> :</p>
+<p>Le schéma de raccordement suivant a été réalisé <em>(via Fritzing)</em> :</p>
 <p>Voici un tableau récapitulatif du schéma de raccordement :</p>
 
 <table>
@@ -175,7 +180,7 @@
 L’utilisation des pourcentages en tant que tel a été fixé en accord avec les notations de la fréquence de <code>RPi.GPIO.PWM</code> .</p>
 <p>La notation BCM est utilisée car c’est la notation utilisée par la bibliothèque <code>Adafruit_CharLCD</code> .  Cependant, sur les câbles, la notation ordonnée de pins est utilisée afin de pouvoir reconnecter directement les câbles sans avoir besoin de schéma de raccordement.</p>
 <h2 id="matériel-utilisé">Matériel utilisé</h2>
-<p>Voici la liste du matériel utilisé<sup class="footnote-ref"><a href="#fn1" id="fnref1:1">1</a></sup> par le NOK-Rover : <a href="https://www.sparkfun.com/orders/4429576">https://www.sparkfun.com/orders/4429576</a><br>
+<p>Voici la liste du matériel utilisé par le NOK-Rover : <a href="https://www.sparkfun.com/orders/4429576">https://www.sparkfun.com/orders/4429576</a><br>
 Bien que tous les éléments commandés furent destinés au NOK-Rover, certains n’ont pas été utilisé.</p>
 <h2 id="logiciels-utilisés">Logiciels utilisés</h2>
 <p>Le code sera écrit en Python (UTF-8) car c’est le seul langage connu par l’entièreté du groupe.</p>
@@ -311,11 +316,4 @@ Nils et Olivia, quant à eux, ont réalisé une partie de la programmation ainsi
 <h3 id="bilan-personnel-nils">Bilan personnel Nils</h3>
 <h3 id="bilan-personnel-olivia">Bilan personnel Olivia</h3>
 <h3 id="bilan-personnel-killian">Bilan personnel Killian</h3>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Conçu par Killian <a href="#fnref1" class="footnote-backref">↩︎</a> <a href="#fnref1:1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 
