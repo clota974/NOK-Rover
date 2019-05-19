@@ -1,3 +1,8 @@
+---
+
+
+---
+
 <p><em>La lecture est aussi possible depuis le répertoire GitHub suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></em></p>
 <h1 id="rapport---nok-rover">Rapport - NOK-Rover</h1>
 <p><em>En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines <strong>Nils, Olivia et Killian</strong>.</em></p>
@@ -13,7 +18,7 @@
 <h2 id="b-pourquoi-ce-projet-nous-intéresse-t-il-">b) Pourquoi ce projet nous intéresse-t-il ?</h2>
 <p>Suite au mini-projet, durant lequel nous avons programmé avec une interface CLI. Nous souhaitions réaliser un projet qui était en interaction avec le réel. Pouvoir toucher notre projet de nos propres mains. De plus, mettre en oeuvre un tel projet nous a permis de “tester” nos capacités dans un domaine de découverte.</p>
 <h1 id="ii-cahier-des-charges">II) Cahier des charges</h1>
-<h2 id="electronique">Electronique</h2>
+<h2 id="brochageelectronique">Brochage/Electronique</h2>
 <p><em>Nota Bene :</em> La partie électronique (brochage) est une partie <strong>annexe</strong> à la programmation informatique</p>
 <p>Le schéma de raccordement suivant a été réalisé <em>(via Fritzing)</em> :</p>
 <p>Voici un tableau récapitulatif du schéma de raccordement :</p>
@@ -107,7 +112,8 @@
 <td>Bleu + (LCD)</td>
 </tr>
 </tbody>
-</table><h2 id="mapping-des-touches-manette">Mapping des touches (manette)</h2>
+</table><p><img src="https://lh3.googleusercontent.com/eCNV49FzG8f4DV7dU2qpdK29xkzdCXeZrjqx3tV8BqeKCzt3hGFldThhe-USu53QczcJBAZuDGEwPw" alt="enter image description here" title="Brochage"></p>
+<h2 id="mapping-des-touches-manette">Mapping des touches (manette)</h2>
 
 <table>
 <thead>
@@ -263,8 +269,9 @@ Il se charge de récupérer les données brutes de la manette   et de les envoye
 <p><img src="https://lh3.googleusercontent.com/MCT0pLShU9YOR2m_smfQoYsepvFeyEn9FTv3avmIISQHqoUNStvjtisjs8VsbEaVLV-n7sIjcSspCA" alt="enter image description here" title="Classes"></p>
 <h4 id="traiter-les-données">Traiter les données</h4>
 <p><a href="https://photos.google.com/share/AF1QipP-R9cu_0Sbe2moNtHqwItpQq5XbvMl3L6Fe2HIOAXZzHvWoOy368banXb7aU6oGw/photo/AF1QipOtA9hWWZMWlHnESetATr2QkJo_T7BKprHhvVDI?key=M2lpNi03UzF5ajdzb1VnYzNFUFRhWUpERVdRWDl3">Voir image</a><br>
-<img src="https://lh3.googleusercontent.com/fE9RT3QEdPvv02wywNGH82zQ4iEjL1LfkhC_D4OiXWyHL7qisxo9o2ZLtN1QqI0Ebn4iF6aC1A-k3A" alt="enter image description here"><br>
-<strong>Les schémas sont disponibles dans le dossier <code>NOK-Rover/Schémas</code></strong></p>
+Aperçu :<br>
+<img src="https://lh3.googleusercontent.com/m4IR95lpogr605z1QdwOYEjwc51Fb74hOScdmjsY_wqpf7dznCb4KaZjogQ_SvK9N2nu2ZVXMOGXgA" alt="V" title="Traitement des données"></p>
+<p><strong>Les schémas sont disponibles dans le dossier <code>NOK-Rover/Schémas</code></strong></p>
 <h1 id="répartition-du-travail">Répartition du travail</h1>
 <p>La répartition des tâches prévue au début du projet était la suivante :</p>
 <ul>
