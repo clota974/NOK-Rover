@@ -1,3 +1,8 @@
+---
+
+
+---
+
 <p><em>La lecture est aussi possible depuis le répertoire GitHub suivant : <a href="https://github.com/clota974/NOK-Rover">https://github.com/clota974/NOK-Rover</a></em></p>
 <h1 id="rapport---nok-rover">Rapport - NOK-Rover</h1>
 <p><em>En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines <strong>Nils, Olivia et Killian</strong>.</em></p>
@@ -317,7 +322,7 @@ Nils et Olivia, quant à eux, ont réalisé une partie de la programmation ainsi
 <p>Après 5 secondes, le programme réinitialise/éteint les GPIO utilisés grâce à <code>GPIO.cleanup()</code> et quitte le programme avec succès grâce à <code>sys.exit(0)</code> .</p>
 <h1 id="vii-amélioration">VII) Amélioration</h1>
 <h1 id="viii-conclusion">VIII) Conclusion</h1>
-<h3 id="bilan-personnel-nils">Bilan personnel Nils</h3>
-<h3 id="bilan-personnel-olivia">Bilan personnel Olivia</h3>
-<h3 id="bilan-personnel-killian">Bilan personnel Killian</h3>
+<p>Bilan personnel Nils:</p>
+<p>Bilan personnel Olivia:</p>
+<p>Bilan personnel Killian:</p>
 
