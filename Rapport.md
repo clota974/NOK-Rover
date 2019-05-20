@@ -301,7 +301,7 @@ Après avoir rencontré différents problèmes que nous avons essayé de résoud
   
 
 ## Bilan personnel de Nils
-Je me rends compte que j'ai bien fait ce cocher la case "ISN" lors de mon inscription en Terminale. En effet, ce projet de comprendre plus en profondeur 
+Je me rends compte que j'ai bien fait ce cocher la case "ISN" lors de mon inscription en Terminale. En effet, ce projet de comprendre plus en profondeur l'informatique. En compagnie de mes camarades, j'ai pu appren 
   
   
 
@@ -314,5 +314,5 @@ Je me rends compte que j'ai bien fait ce cocher la case "ISN" lors de mon inscri
 Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
 Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzODQ5Mzc1LDEwMTAyODQ2MjRdfQ==
+eyJoaXN0b3J5IjpbLTYwNjc2NTczLDEwMTAyODQ2MjRdfQ==
 -->
