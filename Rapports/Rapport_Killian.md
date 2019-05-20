@@ -1,4 +1,6 @@
 *La lecture est aussi possible depuis le répertoire GitHub suivant : [https://github.com/clota974/NOK-Rover](https://github.com/clota974/NOK-Rover)*
+
+*Note : Les annexes du projet (Images+Tableau) font environ 3 pages. Ceci est la raison pour laquelle le projet fait 13 pages.*
 # Rapport - NOK-Rover
 
 _En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les capitaines **Nils, Olivia et Killian**._
@@ -300,7 +302,6 @@ Après avoir rencontré différents problèmes que nous avons essayé de résoud
 Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
 Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
 
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MDQwNTI2M119
+eyJoaXN0b3J5IjpbLTE0Mzc4MzQ4MjZdfQ==
 -->
