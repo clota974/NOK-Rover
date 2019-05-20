@@ -5,15 +5,15 @@ class Buzzer :
     #marche #arret
     
     def __init__(self, a_PWM):
-        self.allume = 0
+        self.allume = False # Rapport cycliqué
+
         """
         Args:
-            self
-            a_PWM (int): 
+            a_PWM (int): Adresse BCM du pin du Buzzer
         """
-        GPIO.setup(a_PWM, GPIO.OUT)
-        self.PWM = GPIO.PWM(a_PWM, 2048)
-        self.PWM.start(self.allume)
+        GPIO.setup(a_PWM, GPIO.OUT) # Formalités ==> Définit les pins en tant que sortie
+        self.PWM = GPIO.PWM(a_PWM, 2048) # Fréquence 2048 Hz donnée par le fabricant
+        self.PWM.start(0) # Eteint
 
 
 
@@ -23,12 +23,16 @@ class Buzzer :
         Mise en route du buzzer
 
         Args:
-            self
-            etat (bool): la frequence est invariable
+            etat (bool): Doit-on allumé le buzzer? True/False
         """
-        self.allume = etat
-        pourcentage = 50 if etat else 0 # 50 afin d'imiter une sinusoide
+
+        self.allume = etat 
+        pourcentage = 50 if etat else 0 # Rapport cyclique : 50 afin d'imiter une sinusoide 
         self.PWM.ChangeDutyCycle(pourcentage)
 
     def inverse(self):
-        self.start(not self.allume)
+        """
+        Allume si éteint, éteint si allumé
+        """
+        
+        self.start(not self.allume) 

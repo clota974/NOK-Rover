@@ -1,9 +1,5 @@
-sample = "66 4b 08 00 01 00 81 00 66 4b 08 00 00 00 81 01 66 4b 08 00 00 00 81 02 66 4b 08 00 00 00 81 03 66 4b 08 00 00 00 81 04 66 4b 08 00 00 00 81 05 66 4b 08 00 00 00 81 06 66 4b 08 00 00 00 81 07 66 4b 08 00 00 00 81 08 66 4b 08 00 00 00 81 09 66 4b 08 00 00 00 81 0a 66 4b 08 00 00 00 81 0b 66 4b 08 00 00 00 81 0c 66 4b 08 00 00 00 81 0d 66 4b 08 00 00 00 82 00 66 4b 08 00 00 00 82 01 66 4b 08 00 b7 fc 82 02 66 4b 08 00 01 80 82 03 66 4b 08 00 01 80 82 04 66 4b 08 00 00 00 82 05 66 4b 08 00 30 fc 82 06 66 4b 08 00 aa 0d 82 07 66 4b 08 00 8e 3f 82 08 66 4b 08 00 00 00 82 09 66 4b 08 00 00 00 82 0a 66 4b 08 00 00 00 82 0b 66 4b 08 00 00 00 82 0c 66 4b 08 00 00 00 82 0d 00 00 00 00 00 00"
-sample = sample.split(" ")
-sample = [int(element, 16) for element in sample]
-
 class Event:
-
+    # Index des valeurs du bytearray reçu (HID)
     INDEX_DS4 = {
         "digital": {
             "CAR": 4,
@@ -36,44 +32,67 @@ class Event:
     }
 
     def __init__(self, raw):
-        self.raw = raw
+        """
+        Args:
+            raw (bytearray): Données HID brutes reçues
+        """
+        self.raw = raw # Correspond au bytearray brut reçu
 
-        self.spam = True
+        self.spam = True # Voir spam dans le rapport
         if(raw[5] == 0):
             self.spam = False
-            self.analyserDS4(self.raw)
+            self.analyserDS4()
         else:
-            print("SPAM")
+            print("SPAM") # Judicieux car cela permet de voir le ralentissement de la réaction de la voiture
             
 
 
-    def analyserDS4(self, raw):
-        buffer = {} 
+    def analyserDS4(self):
+        """
+        Analyse et classe les données brutes reçues
+        
+        Args:
+            None
+        """
 
+        raw = self.raw
+        buffer = {} # Objet (temporaire) qui stocke la valeur des différentes touches de la manettes
+
+        # Voir les différents types de données dans le rapport
         for key in self.INDEX_DS4["digital"]:
             index = self.INDEX_DS4["digital"][key]
             buffer[key] =  (raw[index]==1) # Stocker True ou False 
 
         for key in self.INDEX_DS4["analogue"]:
             index = self.INDEX_DS4["analogue"][key]
+            
+            # Les données analogues sont stockés dans deux octets en base 16
             try:
-                bit1 = raw[index]
-                bit2 = raw[index+1]
+                byte1 = raw[index]
+                byte2 = raw[index+1]
             except:
                 print(raw[index])
                 print(type(raw[index]))
-            buffer[key] = Event.base16_vers_pourcent(bit1, bit2) # Base 16 vers pourcentage
+            buffer[key] = Event.base16_vers_pourcent(byte1, byte2) # Base 16 vers pourcentage
 
-        buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0x01)
+        # Données des flèches
+        buffer["LEFT"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0x01) 
         buffer["RIGHT"] = (raw[self.INDEX_DS4["autre"]["L_R"]] == 0xFF)
         buffer["UP"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0x01)
         buffer["DOWN"] = (raw[self.INDEX_DS4["autre"]["U_D"]] == 0xFF)
 
-        self.data = buffer
+        self.data = buffer # Stocke le buffer (temporaire) dans la propriété `data` (permanent)
 
     def comparer(self, dernierEvt):
-        self.changement = {}
+        """
+        Compare deux objets Event
 
+        Args:
+            dernierEvt (Event): Objet Event précédemment reçu
+        """
+        self.changement = {} 
+
+        # Voir les différents types de données dans le rapport
         for key in self.INDEX_DS4["digital"]:
             val = self.data[key]
             if(dernierEvt != False):
@@ -120,7 +139,3 @@ class Event:
         pourcentage = valeur/max16*100
 
         return int(pourcentage)
-
-
-ev = Event(sample)
-print(ev.data)
