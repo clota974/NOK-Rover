@@ -13,7 +13,7 @@ _En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les c
 
 ## a) Objectif du projet :
     
-Notre projet a pour objectif le pilotage d'un mini Rover piloté par un Raspberry Pi
+Notre projet a pour objectif le pilotage d'un mini Rover embarqué par un Raspberry Pi.
   
 
 ## b) Pourquoi ce projet nous intéresse-t-il ?
