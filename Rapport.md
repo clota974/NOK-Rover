@@ -302,8 +302,7 @@ Après avoir rencontré différents problèmes que nous avons essayé de résoud
 
 ## Bilan personnel de Nils
 Je me rends compte que j'ai bien fait de cocher la case "ISN" lors de mon inscription en Terminale. En effet, ce projet m'a permis de comprendre plus en profondeur l'informatique. Je trouvais tout de même le projet ambitieux au départ, mais à l'aide de mes camarades, j'ai pu apprendre à travailler en groupe, à réaliser les tâches demandées, et bien entendu à programmer !
- Je suis et nous sommes très fière de vous rendre 
-    aboutissement]
+Je suis et nous sommes très fières de vous rendre l'aboutissement de ce projet.
   
 
 ## Bilan personnel d'Olivia
@@ -315,6 +314,6 @@ Je me rends compte que j'ai bien fait de cocher la case "ISN" lors de mon inscri
 Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
 Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0MzM1MjYyNywxOTA3Mzk5MjgwLDEwMT
+eyJoaXN0b3J5IjpbLTUzOTIyMTA1OSwxOTA3Mzk5MjgwLDEwMT
 AyODQ2MjRdfQ==
 -->
