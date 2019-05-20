@@ -13,7 +13,7 @@ _En route vers la planète Localhost à bord de la NOK-Rover, pilotée par les c
 
 ## a) Objectif du projet :
     
-Notre projet a pour objectif le pilotage d'un mini Rover embarqué par un Raspberry Pi.
+Notre projet a pour objectif le pilotage d'un mini Rover piloté par un Raspberry Pi
   
 
 ## b) Pourquoi ce projet nous intéresse-t-il ?
@@ -112,19 +112,8 @@ Le programme est séparé en de nombreuses classes, chacune définissant une par
 
 ## Interaction avec la manette et interface HID
 La manette utilisée est une Dualshock 4 *(manette de PS4)* via Bluetooth.
-L'interface utilisée est une interface HID. La communication des données se fait en hexadécimal (sur 2 octets généralement). Afin de récupérer les données HID, nous utilisons le programme `ds4drv`. Les données sont communiquées dans un bytearray.
-
-Lors de l'analyse nous remarquons que certains enregistrements sont incorrects. Ces données seront considérées comme `spam` et seront ignorées. Etant donné que nous avons remarqué que le 6ème octet ( `raw[5]`) est toujours égal à 0* sauf lorsque c'est un spam. Si la valeur de cet octet est différent de 0, alors l'information sera ignorée.
-**Pendant des durées qui ne dépassent pas 30 mins (hypothèse théorique)*
-
-Nous traiterons 3 types de données :
-* Les données digitales représentées par des booléens
-* Les données analogues (entre -32767=`0x7FFF` et 32767 )
-* Les données-énumérations : Pour les flèches, une valeur bien spécifique correspond à une touche donnée
-
-Le traitement des données se feront soient en données absolues (`data`) ou relatives (`changement`). L'avantage des données relatives est que l'appuie n'a pas besoin d'être permanent.
- 
-***
+L'interface utilisée est une interface HID. La communication des données se fait en hexadécimal (sur 2 octets généralement). Afin de récupérer les données HID, nous utilisons le programme `ds4drv`.
+  
 
 Le processus du NOK-Rover se divise en ces classes suivantes :
 
@@ -232,9 +221,7 @@ Aperçu :
 
 **Les schémas sont disponibles dans le dossier `NOK-Rover/Schémas`**
 
-# IV) Répartition du travail
-
-Les pièces de la voiture nous ont été livrées mi-janvier, l’assemblage de la voiture fut également réalisé en janvier par Killian. Le code quant à lui, fut réalisé en 18 semaines, du 30 janvier jusqu’au 20 mai avec une fréquence de travail de l’ordre d’une fois par semaine. 
+# Répartition du travail 
 
 La répartition des tâches prévue au début du projet était la suivante :
 - Killian devait s'occuper du traitement des données de la manette et donc de la classe `Event`. De plus, il s'occupait de donner les tâches à exécuter par Nils via la partie "Projets" de GitHub.
@@ -248,7 +235,12 @@ Nils et Olivia, quant à eux, ont réalisé une partie de la programmation ainsi
 
 Nous avons tous participé à la rédaction du rapport
 
-# V) Fonctionnement
+# V) Réalisation
+
+Les pièces de la voiture nous ont été livrées mi-janvier, l’assemblage de la voiture fut également réalisé en janvier par Killian. Le code quant à lui, fut réalisé en 18 semaines, du 30 janvier jusqu’au 20 mai. Avec une fréquence de travail de l’ordre d’une fois par semaine, le projet...
+  
+
+# VI) Fonctionnement
 
 Le schéma d'utilisation prévue pour la NOK-Rover est dans l'ordre suivant:
 ## a) Mise en route
@@ -277,7 +269,7 @@ Des situations de conflit ont été repérées et sont gérées :
 
 ## c) Extinction
 En appuyant sur la touche `Share`, la phase d'extinction est lancée :
-- Le Shell affiche un message d'extinction
+- Le Zhell affiche un message d'extinction
 - L'exécution du programme est interrompue par `time.sleep()`
 - Clignotement des LEDs blanches
 - L'écran LCD bascule du rouge au bleu toutes les secondes
@@ -285,34 +277,26 @@ En appuyant sur la touche `Share`, la phase d'extinction est lancée :
 
 Après 5 secondes, le programme réinitialise/éteint les GPIO utilisés grâce à `GPIO.cleanup()` et quitte le programme avec succès grâce à `sys.exit(0)` .
 
-# VI) Améliorations
-
-Le projet n'est bien évidemment pas parfait. Plusieurs éléments auraient pu être améliorés : 
-* Démarrer la voiture dès son branchement : Pour cela le fichier `rc.local` et le fichier `startup.py` était censé détecter l'appui du pushbutton et ainsi démarrer le fichier `main.py`
-* L'ergonomie de la voiture : son design, la solidité du matériel, et les fils qui sont mal organisés et protégés.
+# VII) Amélioration
 
   
+  
 
-# VII) Conclusion
-Après avoir rencontré différents problèmes que nous avons essayé de résoudre, nous sommes parvenus à atteindre notre objectif qui était d'avoir un projet réel et fonctionnel. En effet, la voiture respecte les règles qui lui sont imposées, les commandes sont opérationnelles (la voiture avance et recule, la led s'allume comme prévu, l'écran lcd affiche bien le contenu demandé, etc). Malgré quelques petits détails améliorables, le projet final est en mesure d'être présenté avec dignité et fierté.
+# VIII) Conclusion
+
   
   
   
   
 
-## Bilan personnel de Nils
+Bilan personnel Nils:
 
   
   
 
-## Bilan personnel d'Olivia
+Bilan personnel Olivia:
 
   
   
 
-## Bilan personnel de Killian 
-Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
-Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMDI4NDYyNF19
--->
+Bilan personnel Killian:
