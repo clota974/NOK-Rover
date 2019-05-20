@@ -294,15 +294,13 @@ Le projet n'est bien évidemment pas parfait. Plusieurs éléments auraient pu �
   
 
 # VII) Conclusion
-Après avoir rencontré différents problèmes que nous avons essayé de résoudre, nous sommes parvenus à atteindre notre objectif qui était d'avoir un projet réel et fonctionnel. En effet, la voiture respecte les règles qui lui sont imposées, les commandes sont opérationnelles (la voiture avance et recule, la led s'allume comme prévu, l'écran lcd affiche bien le contenu demandé, etc). Malgré quelques petits détails améliorables, le projet final est en mesure d'être présenté avec dignité et fierté.
+Après avoir rencontré différents problèmes que nous avons essayé de résoudre, nous sommes parvenus à atteindre notre objectif qui était d'avoir un projet réel et fonctionnel. En effet, la voiture respecte les règles qui lui sont imposées, les commandes sont opérationnelles (la voiture avance et recule, la led s'allume comme prévu, l'écran lcd affiche bien le contenu demandé, etc). Malgré quelques petits détails améliorables, le projet final est en mesure d'être présenté avec dignité et fierté.  
   
-  
-  
-  
+ *Le bilan personnel d'Olivia sera rappelé dans son rapport* 
 
 ## Bilan personnel de Nils
 Je me rends compte que j'ai bien fait de cocher la case "ISN" lors de mon inscription en Terminale. En effet, ce projet m'a permis de comprendre plus en profondeur l'informatique. Je trouvais tout de même le projet ambitieux au départ, mais à l'aide de mes camarades, j'ai pu apprendre à travailler en groupe, à réaliser les tâches demandées, et bien entendu à programmer !
-Je suis et nous sommes très fières de vous rendre l'aboutissement de ce projet.
+Je suis et nous sommes très fièrers de vous rendre l'aboutissement de ce projet.
   
 
 ## Bilan personnel d'Olivia
@@ -313,7 +311,9 @@ Je suis et nous sommes très fières de vous rendre l'aboutissement de ce projet
 ## Bilan personnel de Killian 
 Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
 Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzOTIyMTA1OSwxOTA3Mzk5MjgwLDEwMT
-AyODQ2MjRdfQ==
+eyJoaXN0b3J5IjpbMTc4NjA3ODYxMSwtNTM5MjIxMDU5LDE5MD
+czOTkyODAsMTAxMDI4NDYyNF19
 -->
