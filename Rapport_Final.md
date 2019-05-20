@@ -294,9 +294,7 @@ Le projet n'est bien évidemment pas parfait. Plusieurs éléments auraient pu �
   
 
 # VII) Conclusion
-Après avoir rencontré différents problèmes que nous avons essayé de résoudre, nous sommes parvenus à atteindre notre objectif qui était d'avoir un projet réel et fonctionnel. En effet, la voiture respecte les règles qui lui sont imposées, les commandes sont opérationnelles (la voiture avance et recule, la led s'allume comme prévu, l'écran lcd affiche bien le contenu demandé, etc). Malgré quelques petits détails améliorables, le projet final est en mesure d'être présenté avec dignité et fierté.
-  
-  
+Après avoir rencontré différents problèmes que nous avons essayé de résoudre, nous sommes parvenus à atteindre notre objectif qui était d'avoir un projet réel et fonctionnel. En effet, la voiture respecte les règles qui lui sont imposées, les commandes sont opérationnelles (la voiture avance et recule, la led s'allume comme prévu, l'écran lcd affiche bien le contenu demandé, etc). Malgré quelques petits détails améliorables, le projet final est en mesure d'être présenté avec dignité et fierté.  
   
  *Le bilan personnel d'Olivia sera rappelé dans son rapport* 
 
@@ -316,5 +314,5 @@ Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTY3Nzg3OSwtNTM5MjIxMDU5XX0=
+eyJoaXN0b3J5IjpbMTc4NjA3ODYxMSwtNTM5MjIxMDU5XX0=
 -->
