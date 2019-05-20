@@ -308,11 +308,12 @@ Je suis et nous sommes très fièrers de vous rendre l'aboutissement de ce proje
   
   
 
-## Bilan personnel de Killian 
+## Bilan personnel 
 Bien que le domaine de l'informatique n'était pas nouveau pour moi, le domaine de l'électronique est une nouveauté, un saut dans l'inconnu que j'ai effectué avec l'envie de découvrir cette nouvelle manière de travailler. Bien que nos rythmes étaient différents, j'ai été fier de pouvoir porter ce projet aux côtés de mes camarades. 
 Ce projet m'a apporté beaucoup de nouvelles connaissances et j'espère qu'il a été aussi didactique pour moi que pour les copilotes du NOK-Rover.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NjA3ODYxMSwtNTM5MjIxMDU5XX0=
+eyJoaXN0b3J5IjpbMjY1NjA1Mzk2LDE3ODYwNzg2MTEsLTUzOT
+IyMTA1OV19
 -->
